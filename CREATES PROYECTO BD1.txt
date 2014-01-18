@@ -343,8 +343,6 @@ emp_Fecha_Trabajo		Date			NOT NULL,
 emp_Jefe			varchar(2)		NOT NULL,
 emp_Tipo_emp			varchar(20)		NOT NULL,
 emp_Nivel_Estudio		Varchar(20)		NULL,
-emp_fk_EMPLEADO			number(20)		NULL,		
-emp_fk_LUGAR			number(20)		NOT NULL,
 
 
 constraint  pk_empleado		primary key(emp_id),
