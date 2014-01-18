@@ -1,0 +1,482 @@
+Create table HORARIO
+(
+h_Codigo		number(20)		NOT NULL,
+h_Dia			Date			NOT NULL,
+h_Hora			Timestamp		NOT NULL,
+	
+
+constraint pk_horario	primary key (h_Codigo)
+);
+
+
+
+
+create table EVENTO
+(
+e_Codigo			number(20)		NOT NULL,
+e_Nombre			Varchar(20)		NOT NULL,
+e_Censura			varchar(4)		NOT NULL,
+e_Categoria			Varchar(20)	 	NOT NULL,
+e_Genero			Varchar(20)		NOT NULL,
+e_Descripcion			Varchar(20)		NOT NULL,
+e_fk_COMPRA                     number (20)             NOT NULL,     
+e_fk_RECINTO                    number (20)     	NOT NULL,
+e_fk_EMPLEADO			number(20)		NOT NULL,
+
+Constraint pk_evento	primary key(e_Codigo),
+Constraint check_censura check(e_Censura IN('A','B','B-15','C')),
+Constraint check_categoria check(e_Categoria IN('TEATRO','MUSICA','ESPECIAL','DEPORTE'))
+);
+
+
+
+
+create table BITACORA
+(
+b_Codigo		number(20)		NOT NULL,
+b_Fecha_Inicio		Date			NOT NULL,
+b_Fecha_Fin		Date			NOT NULL,
+b_fk_EVENTO		number(20)		NOT NULL,
+b_fk_HORARIO		number(20)		NOT NULL,
+
+Constraint pk_bitacora	primary key(b_Codigo)
+);
+
+
+
+create table RECINTO
+(
+rec_Codigo			number(20)		NOT NULL,
+rec_Nombre			Varchar(40)		NOT NULL,
+rec_Calle 			Varchar(40)		NOT NULL,
+rec_Edificio   			Varchar(20)		NULL,
+rec_Urbanizacion 		Varchar(20)		NOT NULL,
+rec_fk_LUGAR			number(20)		NOT NULL,
+
+Constraint pk_recinto	primary key(rec_Codigo)
+);
+
+
+
+create table SALA
+(
+s_Codigo			number(20)		NOT NULL,
+s_Nombre			Varchar(20)		NOT NULL,
+s_fk_RECINTO			number(20)		NOT NULL,
+
+Constraint pk_sala	primary key(s_COdigo)
+);
+
+
+
+create table ZONA
+(
+z_Codigo			number(20)		NOT NULL,
+z_fk_SALA			number(20)		NOT NULL,
+z_fk_RECINTO			number(20)		NOT NULL,
+
+Constraint pk_zona	primary key(z_Codigo)
+);
+
+
+ 
+create table SECCION
+(
+secc_Codigo			number(20)		NOT NULL,
+secc_fk_ZONA			number(20)		NOT NULL,
+secc_fk_SALA			number(20)		NOT NULL,
+secc_fk_RECINTO			number(20)		NOT NULL,
+
+Constraint pk_seccion 	primary key(secc_Codigo)
+);
+
+ 
+
+Create table PUESTO
+(
+p_Codigo			number(20)		NOT NULL,
+p_fk_RECINTO			number(20)		NOT NULL,
+p_fk_SALA			number(20)		NOT NULL,
+p_fk_ZONA			number(20)		NOT NULL,
+p_fk_SECCION			number(20)		NOT NULL,
+
+constraint pk_puesto	primary key(p_Codigo)
+);
+
+
+create table STAND
+(
+s_Codigo			number(20)		NOT NULL,
+s_Nombre			varchar(50)		NOT NULL,		
+s_Tipo		                varchar(20)		NOT NULL,
+s_Cantidad_Snack		number(20)		NULL,
+s_Cantidad_Bebida		number(20)		NULL,
+s_Fecha_Asignacion		Date			NOT NULL,
+s_fk_CENTRO_COMERCIAL           number (20)		NULL,
+s_fk_RECINTO                    number (20)		NULL,
+
+constraint pk_stand	primary key(s_Codigo),
+constraint check_tipo check(s_Tipo IN('COMIDA','BOLETOS'))
+);
+
+
+
+create table CENTRO_COMERCIAL
+(
+cc_Codigo		number(20)		NOT NULL,
+cc_Nombre		Varchar(40)		NOT NULL,
+cc_fk_LUGAR             number (20)		NOT NULL,
+constraint pk_centro_comercial		primary key(cc_Codigo)
+);
+
+
+create table COMPRA
+(
+comp_numero			Number(20)		NOT NULL,
+comp_Donacion			varchar(2)		NOT NULL,
+comp_Ticket_Protegido		varchar(2)		NOT NULL,
+comp_Envio			varchar(2)		NOT NULL,
+comp_Cantidad_De_Entrada     	Number(20)		NOT NULL,
+comp_Fecha			Date			NOT NULL,
+comp_fk_TIPO_ENTRADA		number(20)		NOT NULL,
+comp_fk_CONSUMIDOR		number(20)		NOT NULL,
+comp_fk_EMPLEADO		number(20)		NOT NULL,
+
+constraint pk_compra	primary key(comp_Numero),
+constraint check_donacion check(comp_Donacion IN ('SI','NO')),
+constraint check_ticket_protegido check(comp_Ticket_Protegido IN('SI','NO')),
+constraint check_envio check(comp_Envio IN('SI','NO'))
+);
+
+create table TEMPORADA
+(
+temp_Codigo		number(20)		NOT NULL,
+temp_Nombre		Varchar(20)		NOT NULL,
+
+constraint pk_temporada		primary key(temp_Codigo)
+);
+
+
+
+create table TIPO_ENTRADA
+(
+te_Codigo		number(20)		NOT NULL,
+te_Nombre		Varchar(20)		NOT NULL,
+te_Costo		Number(20)		NOT NULL,
+
+constraint pk_tipo_entrada 	primary key(te_Codigo)
+);
+
+
+
+
+create table STOCK
+(
+Stock_Codigo			number(20)		NOT NULL,
+Stock_Nombre			varchar(20)		NOT NULL,
+Stock_Cantidad			Number(20)		NOT NULL,
+Stock_fk_STAND			number(20)		NULL,
+Stock_fk_PRODUCTO 		number(20)		NOT NULL,
+
+constraint pk_stock		primary key(Stock_Codigo)
+);
+
+
+
+
+create table PRODUCTO
+(
+prod_Codigo			number(20) 		NOT NULL,
+prod_Nombre			Varchar(20)		NOT NULL,
+prod_Tipo_p			varchar(6)		NOT NULL,
+prod_cantidad			number(20)		NOT NULL,
+prod_Inv_Fisico			number(20)		NOT NULL,
+prod_Inv_Teorico		number(20)		NOT NULL,
+prod_fk_PROVEEDOR		number(20)		NOT NULL,
+
+constraint pk_producto		primary key(prod_Codigo),
+constraint check_tipo_p 	check(prod_Tipo_p IN('BEBIDA','SNACK'))
+);
+
+
+create table P_T_T_E_E
+(
+pttee_Codigo			number(20)	NOT NULL,
+pttee_Costo			Number(20)	NOT NULL,
+pttee_Fecha_Inicio		Date		NOT NULL,
+pttee_Fecha_Fin			Date		NOT NULL,
+pttee_fk_PUESTO			number(20)	NOT NULL,
+pttee_fk_EVENTO			number(20) 	NOT NULL,
+pttee_fk_TIPO_ENTRADA		number(20)	NOT NULL,
+pttee_fk_TEMPORADA		number(20)	NOT NULL,
+pttee_fk_SECCION                number (20)	NOT NULL,
+pttee_fk_ZONA                   number (20)	NOT NULL,
+pttee_fk_SALA                   number (20)	NOT NULL,
+pttee_fk_RECINTO                number (20)	NOT NULL,
+
+constraint pk_p_t_t_e_e 		primary key(pttee_Codigo)
+);
+
+
+create table RESERVACION
+(
+re_Consecutivo		number(20)		NOT NULL,
+re_Codigo_reserva	number(20)		NOT NULL,
+re_Fecha_Reserva	Date			NOT NULL,
+re_fk_CLIENTE		number(20)		NOT NULL,
+
+
+constraint pk_reservacion 	primary key(re_Consecutivo)
+);
+
+
+create table CONSUMIDOR
+(
+con_codigo			number(20)		NOT NULL,
+con_Ci				number(20)		NOT NULL,
+con_Nombre			Varchar(20) 	        NOT NULL,
+con_Apellido			Varchar(20)		NOT NULL,
+con_Sexo			varchar(1)		NOT NULL,
+con_Telefono_oficina		Number(20)		NOT NULL,
+con_Telefono_casa 		Number(20)		NOT NULL,
+con_Telefono_celular		Number(20)		NOT NULL,
+con_Correo			Varchar(38)		NOT NULL,
+con_Fecha_nacimiento		Date			NOT NULL,
+con_Nacionalidad		Varchar(20)		NOT NULL,
+con_Calle 			Varchar(20)		NOT NULL,
+con_Edificio   			Varchar(20)		NOT NULL,
+con_Urbanizacion 		Varchar(20)		NOT NULL, 
+con_fk_LUGAR			number(20)		NOT NULL,
+
+constraint pk_consumidor	primary key(con_codigo),
+constraint check_sexo		check(con_Sexo IN('M','F'))
+);
+
+
+create table CLIENTE
+(
+cli_codigo			number(20)		NOT NULL,
+cli_Rif				Varchar(38)		NOT NULL,
+cli_Nombre_Fiscal		Varchar(38)		NOT NULL,
+cli_Denominacion_Fiscal		Varchar(38)		NOT NULL,
+cli_Fecha_Creacion		Date			NOT NULL,
+cli_Calle			Varchar(38)		NOT NULL,
+cli_Urb				Varchar(38)		NOT NULL,
+cli_Edificio			Varchar(38)		NOT NULL,
+cli_Tipo_cli			varchar(38)		NOT NULL,
+cli_Puntos_Acumulados		Number(38)		NOT NULL,
+cli_fk_LUGAR			number(20)		NOT NULL,
+cli_Correo			Varchar(38)		NOT NULL,
+cli_Clave			Varchar(38)		NOT NULL,
+constraint pk_cliente 		primary key(cli_codigo),
+constraint check_tipo_cli		check(cli_Tipo_cli IN('PRODUCTORA','CORPORATIVO'))
+);
+
+
+create table ORDEN_COMPRA	
+(
+oc_Numero			Number(20)		NOT NULL,
+oc_Fecha			Date			NOT NULL,
+oc_Precio			Number(20)		NOT NULL,
+oc_Cantidad			Number(20)		NOT NULL,
+oc_Total			number(20,2)		NOT NULL,
+oc_fk_PROVEEDOR			number(20)		NOT NULL,
+
+constraint    pk_orden_compra		primary key(oc_Numero)
+);
+
+
+
+create table ORDEN_PAGO
+(
+op_Numero		Number(20)		NOT NULL,
+op_Fecha		Date			NOT NULL,
+op_Monto		Number(20)		NOT NULL,
+op_fk_ORDEN_COMPRA	number(20,2)		NOT NULL,
+
+constraint   pkorden_orden_pago		primary key(op_Numero)
+);
+
+
+
+create table PRODUCTO_ORDEN_COMPRA
+(
+prodoc_Codigo		number(20)		NOT NULL,
+prodoc_Precio		Number(20)		NOT NULL,
+prodoc_Cantidad		Number(20)		NOT NULL,
+prodoc_fk_ORDEN_COMPRA	Number(20)		NOT NULL,
+prodoc_fk_PRODUCTO	number(20)		NOT NULL,
+
+constraint   pk_producto_orden_compra		primary key(prodoc_Codigo)
+);
+
+
+create table PROVEEDOR
+(
+prov_codigo			number(20)		NOT NULL,
+prov_Rif			Varchar(20)		NOT NULL,
+prov_Nombre			Varchar(50)		NOT NULL,
+prov_Calle 			Varchar(50)		NOT NULL,
+prov_Urbanizacion 		Varchar(50)		NOT NULL,
+prov_Edificio 			Varchar(50)		NOT NULL,
+prov_Contacto			Varchar(20)		NOT NULL,
+prov_Telefono			Number(20)		NOT NULL,
+prov_fk_LUGAR			number(20)		NOT NULL,
+
+constraint pk_proveedor   primary key(prov_codigo)
+);
+
+
+
+create table EMPLEADO
+(
+emp_id				number(20)		NOT NULL,
+emp_Ci				number(20)		NOT NULL,
+emp_Nombre			Varchar(20)		NOT NULL,
+emp_Apellido			Varchar(20)		NOT NULL,
+emp_Calle			Varchar(20)		NOT NULL,
+emp_urb				Varchar(20)		NOT NULL,
+emp_edificio			Varchar(20)		NOT NULL,
+emp_Sexo_emp			Char(1)			NOT NULL,
+emp_Fecha_Nacimiento		Date			NOT NULL,
+emp_Fecha_Trabajo		Date			NOT NULL,
+emp_Jefe			varchar(2)		NOT NULL,
+emp_Tipo_emp			varchar(20)		NOT NULL,
+emp_Nivel_Estudio		Varchar(20)		NULL,
+emp_fk_EMPLEADO			number(20)		NULL,		
+emp_fk_LUGAR			number(20)		NOT NULL,
+
+
+constraint  pk_empleado		primary key(emp_id),
+constraint  check_sexo_emp		check(emp_Sexo_emp IN('M','F')),
+constraint  check_jefe		check(emp_Jefe IN('SI','NO')),
+constraint  check_tipo_empleado    check(emp_Tipo_emp IN('OFICINA','CALL CENTER','STAND'))
+);
+
+
+create table PAGO
+(
+pag_Numero				Number(20)		NOT NULL,
+pag_Fecha				Date			NOT NULL,
+pag_Forma				Varchar(20)		NOT NULL,
+pag_Monto				Number(20)		NOT NULL,
+
+constraint	pk_pago		primary key(pag_Numero)
+);
+
+
+create table USUARIO
+(
+u_Nickname			Varchar(20)		NOT NULL,
+u_Clave				Varchar(20)		NOT NULL,
+u_Correo			Varchar(20)		NOT NULL,
+u_fk_ROL		number(20)		NOT NULL,
+
+
+constraint  pk_usuario		primary key(u_Nickname)
+);
+
+
+create table ROL
+(
+Rol_Codigo				number(20)		NOT NULL,
+Rol_Nombre				number(20)		NOT NULL,
+
+constraint	pk_rol		primary key(Rol_Codigo)
+);
+
+
+create table LUGAR
+(
+l_Codigo				number(20)		NOT NULL,
+l_Tipo_lugar				Varchar(20)		NOT NULL,
+l_Nombre				Varchar(30)		NOT NULL,
+l_fk_LUGAR				number(20),
+
+constraint	pk_lugar	primary key(l_codigo),
+constraint check_tipo_lugar		check(l_Tipo_lugar IN ('Pais','Ciudad'))
+);
+
+
+create table ENCUESTA
+(
+enc_Codigo				number(20)		NOT NULL,
+enc_Calificacion			Number(20)		NOT NULL,
+enc_Tipo_enc				Char(20)		NOT NULL,
+enc_Descripcion				Varchar(20)		NOT NULL,
+enc_fk_EMPLEADO				number(20)		NOT NULL,
+
+
+constraint  pk_encuesta		primary key(enc_Codigo),
+constraint check_tipo_enc		check(enc_Tipo_enc IN('CERRADA','ESCALA'))
+);
+
+
+
+create table PREGUNTA
+(
+preg_Codigo				number(20)		NOT NULL,
+preg_Descripcion			Varchar(20)		NOT NULL,
+preg_Tipo_preg				varchar(20)		NOT NULL,
+
+constraint  pk_pregunta		primary key(preg_Codigo),
+constraint check_tipo_preg     check(preg_Tipo_preg IN('',''))
+);
+
+
+create table VALOR
+(
+V_Codigo				number(20)		NOT NULL,
+V_Valor					Number(20)		NOT NULL,
+
+constraint 	pk_valor		primary key(V_Codigo)
+);
+
+
+
+create table ENCUESTA_PREGUNTA_VALOR
+(
+epv_Codigo		number(20)	 NOT NULL,
+epv_fk_ENCUESTA		number(20)	 NOT NULL,
+epv_fk_PREGUNTA		number(20)	 NOT NULL,
+epv_fk_VALOR		number(20)	 NOT NULL,
+
+constraint  pk_encuesta_pregunta_valor		primary key(epv_Codigo)
+);
+
+
+
+create table EXPERIENCIA
+(
+exp_Codigo			number(20)		NOT NULL,
+exp_Cia				Varchar(20)		NOT NULL,
+exp_Fecha_Inicio		Date			NOT NULL,
+exp_Fecha_Fin			Date			NOT NULL,
+exp_fk_EMPLEADO			number(20)		NOT NULL,
+
+constraint	pk_experiencia		primary key(exp_Codigo)
+);
+
+
+
+create table EMPRESA_ENVIO
+(
+ee_Codigo				number(20)		NOT NULL,
+ee_Nombre				Varchar(20)		NOT NULL,
+
+constraint pk_empresa	primary key(ee_Codigo)
+);
+
+
+
+Create table LUGAR_EMPRESA_ENVIO
+(
+lee_Codigo			number(20)		NOT NULL,
+lee_Tarifa			Number(20)		NOT NULL,
+lee_fk_EMPRESA_ENVIO		number(20)		NOT NULL,
+lee_fk_LUGAR			number(20)		NOT NULL,
+
+constraint pk_lugar_empresa_envio		primary key(lee_Codigo)
+);
+
+				
