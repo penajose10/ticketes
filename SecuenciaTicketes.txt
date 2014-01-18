@@ -1,0 +1,13 @@
+create sequence l_codigo start with 1 increment by 1;
+create sequence cc_codigo start with 1 increment by 1;
+create sequence cli_codigo start with 1 increment by 1;
+create sequence emp_id start with 1 increment by 1;
+create sequence con_codigo start with 1 increment by 1;
+create sequence prod_codigo start with 1 increment by 1;
+create sequence prov_codigo start with 1 increment by 1;
+create sequence s_codigo start with 1 increment by 1;
+create sequence stock_codigo start with 1 increment by 1;
+create sequence oc_numero start with 1 increment by 1;
+create sequence op_numero start with 1 increment by 1;
+create sequence rec_codigo start with 1 increment by 1;
+
