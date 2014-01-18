@@ -1,4 +1,4 @@
-ticketes
+ticketejas
 ========
 
 proyecto de base de datos
