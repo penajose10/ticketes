@@ -6,6 +6,8 @@ include_once Smarty_Include;
 include_once Smarty_Conf;
 
 
+
+
 session_start();
 if (isset ($_SESSION['username'])){
 	if (!isset($_SESSION['success_message'])){
@@ -17,6 +19,11 @@ if (isset ($_SESSION['username'])){
     $smarty->display(Template_Dir.'index.tpl');   
 }
 else{
+  $smarty->assign("nombre_usuario", "ALEJANDRO" ); 
   $smarty->display(Template_Dir.'index.tpl'); 
 }
+
+
+
+
 ?>
