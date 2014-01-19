@@ -54,6 +54,6 @@ abstract class Recinto extends Util_DataBase {
 			}
 }
     
-	//Recinto::eliminarR(21);
+	Recinto::eliminarR(21);
 
 ?>

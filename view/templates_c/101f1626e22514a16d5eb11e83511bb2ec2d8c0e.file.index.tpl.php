@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-19 18:45:47
+=======
 <?php /* Smarty version Smarty-3.1.14, created on 2014-01-19 18:52:03
+>>>>>>> a94f03f2bbb0645fd8e4abcfe8e4d92c9a1ee74a
          compiled from "view\templates\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:93252d723a7aed205-44148450%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,25 +11,41 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '101f1626e22514a16d5eb11e83511bb2ec2d8c0e' => 
     array (
       0 => 'view\\templates\\index.tpl',
+<<<<<<< HEAD
+      1 => 1390153542,
+=======
       1 => 1390153920,
+>>>>>>> a94f03f2bbb0645fd8e4abcfe8e4d92c9a1ee74a
       2 => 'file',
     ),
     '66a8c2ff066aaf66c9998bd03de492a82f694cc6' => 
     array (
       0 => 'view\\templates\\base.tpl',
+<<<<<<< HEAD
+      1 => 1390151983,
+=======
       1 => 1390152009,
+>>>>>>> a94f03f2bbb0645fd8e4abcfe8e4d92c9a1ee74a
       2 => 'file',
     ),
     '884f48beb8209f6d8de3a031ff4e96496a091e30' => 
     array (
       0 => 'view\\templates\\top_menu.tpl',
+<<<<<<< HEAD
+      1 => 1390151983,
+=======
       1 => 1390152009,
+>>>>>>> a94f03f2bbb0645fd8e4abcfe8e4d92c9a1ee74a
       2 => 'file',
     ),
     'abaa0c9ef9ab3c0865d3c824fe63b3bdf32d0ce2' => 
     array (
       0 => 'view\\templates\\footer.tpl',
+<<<<<<< HEAD
+      1 => 1390151983,
+=======
       1 => 1390152009,
+>>>>>>> a94f03f2bbb0645fd8e4abcfe8e4d92c9a1ee74a
       2 => 'file',
     ),
   ),
@@ -75,7 +95,11 @@ bootstrap.min.js"></script>
             <?php /*  Call merged included template "top_menu.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("top_menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '93252d723a7aed205-44148450');
+<<<<<<< HEAD
+content_52dc0f4bdc1c62_17121830($_smarty_tpl);
+=======
 content_52dc10c3ea3b51_90296106($_smarty_tpl);
+>>>>>>> a94f03f2bbb0645fd8e4abcfe8e4d92c9a1ee74a
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "top_menu.tpl" */?>
     
 
@@ -101,11 +125,38 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "top_menu.tp
   <div class="jumbotron">
       <div class="container">
         <h1>Bienvenido <?php echo $_smarty_tpl->tpl_vars['nombre_usuario']->value;?>
+<<<<<<< HEAD
+</h1>
+=======
  </h1>
+>>>>>>> a94f03f2bbb0645fd8e4abcfe8e4d92c9a1ee74a
         <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
         <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
       </div>
     </div>
+    <div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<form role="form">
+				<div class="form-group">
+					 <label for="exampleInputEmail1">Email address</label><input type="email" class="form-control" id="exampleInputEmail1" />
+				</div>
+				<div class="form-group">
+					 <label for="exampleInputPassword1">Password</label><input type="password" class="form-control" id="exampleInputPassword1" />
+				</div>
+				<div class="form-group">
+					 <label for="exampleInputFile">File input</label><input type="file" id="exampleInputFile" />
+					<p class="help-block">
+						Example block-level help text here.
+					</p>
+				</div>
+				<div class="checkbox">
+					 <label><input type="checkbox" /> Check me out</label>
+				</div> <button type="submit" class="btn btn-default">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
 
 <div class="container">
 	<div class="row clearfix">
@@ -138,16 +189,26 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "top_menu.tp
             <?php /*  Call merged included template "footer.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '93252d723a7aed205-44148450');
+<<<<<<< HEAD
+content_52dc0f4be06c34_68653187($_smarty_tpl);
+=======
 content_52dc10c3ecbfb0_13480302($_smarty_tpl);
+>>>>>>> a94f03f2bbb0645fd8e4abcfe8e4d92c9a1ee74a
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "footer.tpl" */?>
         
                        
     </div>
 </body>
 
+<<<<<<< HEAD
+</html><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-19 18:45:47
+         compiled from "view\templates\top_menu.tpl" */ ?>
+<?php if ($_valid && !is_callable('content_52dc0f4bdc1c62_17121830')) {function content_52dc0f4bdc1c62_17121830($_smarty_tpl) {?><div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+=======
 </html><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-19 18:52:03
          compiled from "view\templates\top_menu.tpl" */ ?>
 <?php if ($_valid && !is_callable('content_52dc10c3ea3b51_90296106')) {function content_52dc10c3ea3b51_90296106($_smarty_tpl) {?><div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+>>>>>>> a94f03f2bbb0645fd8e4abcfe8e4d92c9a1ee74a
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -175,8 +236,14 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "footer.tpl"
       </form>
     </div><!--/.navbar-collapse -->
   </div>
+<<<<<<< HEAD
+</div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-19 18:45:47
+         compiled from "view\templates\footer.tpl" */ ?>
+<?php if ($_valid && !is_callable('content_52dc0f4be06c34_68653187')) {function content_52dc0f4be06c34_68653187($_smarty_tpl) {?><footer style="position:absolute; bottom:15px;" class="container">
+=======
 </div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-19 18:52:03
          compiled from "view\templates\footer.tpl" */ ?>
 <?php if ($_valid && !is_callable('content_52dc10c3ecbfb0_13480302')) {function content_52dc10c3ecbfb0_13480302($_smarty_tpl) {?><footer style="position:absolute; bottom:15px;" class="container">
+>>>>>>> a94f03f2bbb0645fd8e4abcfe8e4d92c9a1ee74a
         <p align="center">© Ticketes 2014</p>
 </footer><?php }} ?>
