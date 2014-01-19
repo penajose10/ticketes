@@ -92,7 +92,7 @@ $query= Util_String::concatenate(eliminar_emp, $values);
 }
 
 
-ZONA::eliminar(21);
+//ZONA::eliminar(21);
 
 
 

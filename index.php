@@ -14,9 +14,11 @@ if (isset ($_SESSION['username'])){
     else{
     	 $smarty->assign("success_message", $_SESSION['success_message'] );
     }
+	
     $smarty->display(Template_Dir.'index.tpl');   
 }
 else{
+	$smarty->assign("nombre_usuario", "DAVID");
   $smarty->display(Template_Dir.'index.tpl'); 
 }
 ?>
