@@ -47,11 +47,12 @@
         {/block}
     
 
-        {block name="footer"}             
-            {include file="footer.tpl"}
-        {/block}
+        
                        
     </div>
+    {block name="footer"}             
+            {include file="footer.tpl"}
+        {/block}
 </body>
 
 </html>

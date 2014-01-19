@@ -1,0 +1,282 @@
+<link href="http://fonts.googleapis.com/css?family=Coda:400,800" rel="stylesheet" type="text/css" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="menu-wrapper">
+	<div id="menu">
+		<ul>
+			<ul>
+			<li><a href="inicio.php">Inicio</a></li>
+			<li><a href="CentrosComerciales.php">Centros Comerciales</a></li>
+            <li><a href="Lugares.php">Lugares</a></li>
+			<li><a href="listamenu.php">Otros</a></li>
+		</ul>
+		
+		
+		
+		</ul>
+	</div>
+    
+	<!-- end #menu -->
+</div>
+<div id="header-wrapper">
+  <div id="header">
+    <div id="logo">
+      <h4>&nbsp;</h4>
+      <table width="200" border="0" align="center">
+        <tr>
+          <td><a href="index.php"><img src="imagenes/foto_empleados_mini.jpg" alt="" width="600" height="200" /></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<div id="banner"></div>
+<div id="wrapper">
+	<!-- end #header -->
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+			  <div id="content">
+				  <div class="post">
+
+<form name="form1" method="post" action="insertarEmpleado.php">
+                            
+							<label>
+							<table width="450" border="0" align="center">
+							  <tr>
+							    <td width="96">CI </td>
+							    <td width="144"><input type="text" name="ci" id="ci" /></td>
+						      </tr>
+							  <tr>
+							    <td>Nombre </td>
+							    <td><input type="text" name="nombre" id="nombre" /></td>
+						    </tr>
+							  <tr>
+							    <td>Apellido</td>
+							    <td><input type="text" name="apellido" id="apellido" /></td>
+						      </tr>
+							  <tr>
+							    <td>Calle</td>
+							    <td><input type ="text" name="c" id="c" /></td>
+						      </tr>
+							  <tr>
+							    <td>Urbanizacion</td>
+							    <td><input type="text" name="urb" id="urb" /></td>
+						      </tr>
+							  <tr>
+							    <td>Edificio</td>
+							    <td><input type="text" name="ed" id="ed" /></td>
+						      </tr>
+							  <tr>
+							    <td>Sexo</td>
+					<td><select name="sexo" id="sexo">
+							      <?PHP 
+							$connect = oci_connect('ticketes','1234','(DESCRIPTION=(ADDRESS=(PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521))    (CONNECT_DATA =    (SID = xe)))');
+							$query = "select distinct EMP_SEXO_EMP from EMPLEADO";				  
+	 						$result = OCIParse($connect, $query);
+							if (!$result)
+	 							{
+	    							$Error = oci_error();
+									trigger_error(htmlentities($Error[' hubo un error ']), E_USER_ERROR); 
+		   							echo $Error;
+	 							}
+								else
+								{
+									oci_execute($result);
+									ocicommit($connect);
+									ocilogoff($connect);
+								}
+					
+							while(OCIFetch($result))
+								{ 
+	      						$sexo = ociresult ($result,"EMP_SEXO_EMP") ;
+	      						$id = ociresult ($result,"EMP_ID") ;
+		  						echo '<option value="'.$sexo.'">'.$sexo.'</option>';
+								
+								}
+						    ?>
+						        </select></td>
+						      </tr>
+							 <tr>
+							        <td>Fecha de Nacimiento</td>
+							        <td><input type= "date" name="fnac" id="fnac">
+							          </td>
+						          </tr>
+							  <tr>
+							        <td>Fecha Creacion</td>
+							        <td><input type= "date" name="fcre" id="fcre">
+							          </td>
+						          </tr>
+							 <tr>
+							    <td>Jefe?</td>
+							    <td><input type="text" name="jefe" id="jefe" /></td>
+						    </tr>
+							  <tr>
+							    <td>Tipo de Empleado</td>
+					<td><select name="temp" id="temp">
+							      <?PHP 
+							$connect = oci_connect('ticketes','1234','(DESCRIPTION=(ADDRESS=(PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521))    (CONNECT_DATA =    (SID = xe)))');
+							$query = "select distinct EMP_TIPO_EMP from EMPLEADO";				  
+	 						$result = OCIParse($connect, $query);
+							if (!$result)
+	 							{
+	    							$Error = oci_error();
+									trigger_error(htmlentities($Error[' hubo un error ']), E_USER_ERROR); 
+		   							echo $Error;
+	 							}
+								else
+								{
+									oci_execute($result);
+									ocicommit($connect);
+									ocilogoff($connect);
+								}
+					
+							while(OCIFetch($result))
+								{ 
+	      						$temp = ociresult ($result,"EMP_TIPO_EMP") ;
+	      						$id = ociresult ($result,"EMP_ID") ;
+		  						echo '<option value="'.$temp.'">'.$temp.'</option>';
+								
+								}
+						    ?>
+						        </select></td>
+						      </tr>
+							 <tr>
+							    <td>Nivel de Estudio</td>
+							    <td><input type="text" name="nest" id="nest" /></td>
+						    </tr>
+                             <tr>
+							  
+                              <td>Seleccione el Pais al que Pertenece</td>
+							        <td><select name="pais" id="pais"> 
+							          <?PHP 
+							$connect = oci_connect('ticketes','1234','(DESCRIPTION=(ADDRESS=(PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521))    (CONNECT_DATA =    (SID = xe)))');
+							$query = "select l_NOMBRE,l_CODIGO from LUGAR where l_tipo_lugar ='Pais'";		
+									  
+	 						$result = OCIParse($connect, $query);
+							if (!$result)
+	 							{
+	    							$Error = oci_error();
+									trigger_error(htmlentities($Error[' hubo un error ']), E_USER_ERROR); 
+		   							echo $Error;
+	 							}
+								else
+								{
+									
+									oci_execute($result);
+									ocicommit($connect);
+									ocilogoff($connect);
+								}
+					
+							while(OCIFetch($result))
+								{ 
+								
+	      						$p = ociresult ($result,"L_NOMBRE") ;
+	      						$id = ociresult ($result,"L_CODIGO") ;
+		  						echo '<option value="'.$id.'">'.$p.'</option>';
+								echo $id;
+								}
+						    ?>
+						            </select></td>
+							         
+						          </tr>
+							      
+                               <tr>
+							    <td>&nbsp;</td>
+							    <td>&nbsp;</td>
+						      </tr>
+                                <tr>
+							    <td>&nbsp;</td>
+							    <td><input type="submit" name="submit" id="button" value="AGREGAR" /></td>
+						      </tr>
+                              
+							  </table>
+							  <blockquote>
+							    <p align="center">&nbsp;</p>
+							    
+							  </blockquote>
+                               </label>
+                            
+                               <label>
+                              <blockquote>
+                                <p align="left">&nbsp;</p>
+                              </blockquote>
+                            </label>
+                            
+                            <label>
+                              <blockquote>
+                                <p align="left">&nbsp;</p>
+                              </blockquote>
+                            </label>
+                            <label>
+                              <blockquote>
+                                <p align="left">&nbsp;</p>
+                              </blockquote>
+                            </label>
+                            <label>
+                            
+                            <blockquote>
+                                <p align="left">&nbsp;</p>
+                              </blockquote>
+                            </label>
+                             <label>
+                            
+                            <blockquote>
+                                <p align="left">&nbsp;</p>
+                              </blockquote>
+                            </label>
+                             <label>
+                            
+                            <blockquote>
+                                <p align="left">&nbsp;</p>
+                              </blockquote>
+                            </label>
+                              <blockqoute>
+                                <p align="left">&nbsp;</p>
+                              </blockquote>
+                            </label>
+                          
+                                                  	
+                             <label>
+                              <blockquote>
+                                <p align="left">&nbsp;</p>
+                              </blockquote>
+                            </label>
+                        	</form> 
+                            </div>
+			</div>
+				<!-- end #content -->
+		<div id="sidebar">
+					<ul>
+						<li>
+							<h2><link href="css/left_menu.css" rel="stylesheet" type="text/css" /> 
+                            <div class="main_cont">  
+                          <!--MENU NAVEGACION EXCLUSIVO DE ROL--> 
+							<div class="menu_top_bg">MENU</div>  
+							<div class="sub_menu">  
+								<ul>    
+									<li><a href="consultarEmpleado.php">lista de Empleados</a></li>
+									<li><a href="NuevoEmpleado.php">Nuevo Empleado</a></li>
+									<li><a href="eliminarEmpleado.php">eliminar Empleado</a></li>
+                                    <li><a href="modificarEmpleado.php">modificar empleado</a></li>
+									
+								</ul>  
+							</div>  
+							</div> 
+							</h2>
+						</li>
+					</ul>
+				</div>
+				<!-- end #sidebar -->
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p>&copy; 2013 DISENADO Y PROGRAMADO POR PPS </p>
+</div>
+<!-- end #footer -->
+</body>
+</html>
