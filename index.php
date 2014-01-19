@@ -17,6 +17,7 @@ if (isset ($_SESSION['username'])){
     $smarty->display(Template_Dir.'index.tpl');   
 }
 else{
+	$smarty -> assign ('nombre_usuario','jose');
   $smarty->display(Template_Dir.'index.tpl'); 
 }
 ?>
