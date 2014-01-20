@@ -4,9 +4,9 @@ include_once 'Util_Database.php';
 include_once 'Util_String.php';
 
 define('Recintos','select * from RECINTO');
-define('Recinto_Nombre',"select * from RECINTO where REC_NOMBRE='%' and REC_FK_LUGAR= '%'");
+define('Recinto_id',"select * from RECINTO where REC_CODIGO=%");
 define('Agregar_recinto',"insert into RECINTO values(rec_codigo.nextval,'%','%','%','%',%)");
-define('Actualizar_recinto',"update RECINTO set REC_EDIFICIO= '%' where REC_FK_LUGAR= %");
+define('Actualizar_recinto',"update RECINTO set REC_NOMBRE='%',REC_CALLE='%',REC_EDIFICIO= '%',REC_URBANIZACION='%', REC_FK_LUGAR=% where REC_CODIGO= %");
 define('Eliminar_recinto',"delete from RECINTO where REC_CODIGO = %");
 
 abstract class Recinto extends Util_DataBase {
@@ -19,10 +19,18 @@ abstract class Recinto extends Util_DataBase {
 	private $lug;
 	
 	
-	public static function Recinto_N(){
+	public static function RecintoN(){
 		
   		$recinto= Recinto::execute_select(Recintos);
-		print_r ($recinto[0]["REC_NOMBRE"]);	
+		return $recinto;	
+	}
+	
+	public static function RecintoID($Codigo){
+		$valores = array();
+		$valores[0]=$Codigo;
+		$query=UTIL_STRING::concatenate(Recinto_id,$valores);
+  		$recinto= Recinto::execute_select($query);
+		return $recinto;	
 	}
 	
 	public static function InsertarR($Nombre ,$Calle, $Edificio, $urb, $lug){
@@ -37,10 +45,14 @@ abstract class Recinto extends Util_DataBase {
 		Recinto::execute_query($query);	
 	}
 	
-	public static function actulizarR_E_L($Edificio, $lug){
+	public static function ActulizarR($Nombre ,$Calle, $Edificio, $urb, $lug,$Codigo){
 		$valores= array();
-		$valores[0]=$Edificio;
-		$valores[1]=$lug;
+		$valores[0]=$Nombre;
+		$valores[1]=$Calle;
+		$valores[2]=$Edificio;
+		$valores[3]=$urb;
+		$valores[4]=$lug;
+		$valores[5]=$Codigo;
 		$query=UTIL_STRING::concatenate(Actualizar_recinto,$valores);
 		Recinto::execute_query($query);		
 		}
