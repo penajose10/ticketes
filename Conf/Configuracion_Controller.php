@@ -24,7 +24,7 @@ define("Util_File","model/Util_File.php");
 define("Util_Email","model/Util_Email.php");
 define("Lugar","model/Lugar.php");
 define("Recinto","model/Recinto.php");
-
+define("Empleado","model/empleado.php");
 
 /* Uploads*/
 define("uploads","uploads/");
