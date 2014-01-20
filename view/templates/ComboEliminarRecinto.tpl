@@ -3,9 +3,11 @@
 {block name="content"}
 <br />
 <br /><br />
- <label for="">Seleccione Recinto a Modificar</label>
-                {literal}
-                <select class="form-control"  name="recinto" id="recinto"onchange="$.post( 'RecintoDetalle.php', { recinto: $('#recinto').val()}, function( data ) {$('#recinto_d').html( data );} ); "> {/literal}
+
+ <label for="">Seleccione Recinto a Eliminar</label>
+               
+               <form role="form" action="BorrarRecinto.php" method="post">
+                <select class="form-control"  name="recinto" id="recinto">
                 
                  <option value="">--------</option> 
   							{foreach from=$Recintos item=Recinto}  
@@ -15,7 +17,9 @@
      {/foreach}
 				</select>
                 <br/>
-                <div id="recinto_d">
-				</div>
+                
+				<div class="checkbox">
+					 
+				</div> <button type="submit" class="btn btn-default">Borrar</button>
                 
                 {/block}
