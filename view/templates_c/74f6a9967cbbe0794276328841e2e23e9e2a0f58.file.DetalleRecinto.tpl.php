@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-19 23:12:08
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-22 04:05:56
          compiled from "view\templates\DetalleRecinto.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:254652dc46f418f893-08595608%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '74f6a9967cbbe0794276328841e2e23e9e2a0f58' => 
     array (
       0 => 'view\\templates\\DetalleRecinto.tpl',
-      1 => 1390169521,
+      1 => 1390356548,
       2 => 'file',
     ),
   ),

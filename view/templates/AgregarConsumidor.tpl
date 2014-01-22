@@ -11,7 +11,12 @@
     <div class="container">
 	<div class="row clearfix">
 		<div class="col-md-4 column">
-			<form role="form" action="Insertarconsumidor.php" method="post">
+			<form role="form" action="InsertarConsumidor.php" method="post">
+            
+            <div class="form-group">
+					 <label align="center" for="">Cedula</label><input type="text" name="ci" class="form-control" id="ci" />
+				</div>
+                
 				<div class="form-group">
 					 <label align="center" for="">Nombre</label><input type="text" name="nom" class="form-control" id="nom" />
 				</div>
@@ -42,7 +47,24 @@
 					 <label for="">Correo Electronico</label><input type="text" class="form-control" name="correo" id="correo" />
 				</div>
                 
+                <div class="form-group">
+					 <label for="">Clave</label><input type="text" class="form-control" name="clave" id="clave" />
+				</div>
+                
+                <div class="form-group">
+                <div>
                 <label for="">Fecha Nacimiento</label><input type="date" class="form-control" name="fn" id="fn" />
+				</div>
+                
+                
+                <div class="form-group">
+                <div>
+                <label for="">Nacionalidad</label><input type="text" class="form-control" name="nac" id="nac" />
+				</div>
+                
+                <div class="form-group">
+                <div>
+                <label for="">Calle</label><input type="text" class="form-control" name="calle" id="calle" />
 				</div>
                 
                 <div class="form-group">

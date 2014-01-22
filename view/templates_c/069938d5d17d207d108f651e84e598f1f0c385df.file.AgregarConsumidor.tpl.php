@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-22 19:47:42
-         compiled from "view\templates\AgregarEvento.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:143952deb8ca6213d4-77378893%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-22 18:15:51
+         compiled from "view\templates\AgregarConsumidor.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1504052dff5c83c9492-03731491%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '269775aeac46eb00745560109e4992ccace306d9' => 
+    '069938d5d17d207d108f651e84e598f1f0c385df' => 
     array (
-      0 => 'view\\templates\\AgregarEvento.tpl',
-      1 => 1390405614,
+      0 => 'view\\templates\\AgregarConsumidor.tpl',
+      1 => 1390410935,
       2 => 'file',
     ),
     '66a8c2ff066aaf66c9998bd03de492a82f694cc6' => 
@@ -35,12 +35,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '143952deb8ca6213d4-77378893',
+  'nocache_hash' => '1504052dff5c83c9492-03731491',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52deb8ca786583_73701945',
+  'unifunc' => 'content_52dff5c851d666_39840795',
   'variables' => 
   array (
     'css' => 0,
@@ -50,7 +50,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52deb8ca786583_73701945')) {function content_52deb8ca786583_73701945($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_52dff5c851d666_39840795')) {function content_52dff5c851d666_39840795($_smarty_tpl) {?><!DOCTYPE html>
 <!--[if IE 7 ]><html class="ie ie7" lang="en"><![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"><![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
@@ -80,8 +80,8 @@ bootstrap.min.js"></script>
     
             <?php /*  Call merged included template "top_menu.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("top_menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '143952deb8ca6213d4-77378893');
-content_52e0124e952109_78394323($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("top_menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1504052dff5c83c9492-03731491');
+content_52dffcc7156849_65745325($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "top_menu.tpl" */?>
     
 
@@ -104,80 +104,97 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "top_menu.tp
     
     <div class="container">
         
-	  
-	<br/>
-	<br/>
-<div class="container">
+  <div class="jumbotron">
+      <div class="container">
+        <h1>Nuevo Cliente</h1>
+        <p>aqui para ingresar</p>
+        <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div>
+    <div class="container">
 	<div class="row clearfix">
-		<div class="col-md-12 column">
-			<h1>Agregar Evento</h1>
-			<form role="form"   action="InsertarEvento.php" method="POST">
+		<div class="col-md-4 column">
+			<form role="form" action="InsertarConsumidor.php" method="post">
+            
+            <div class="form-group">
+					 <label align="center" for="">Cedula</label><input type="text" name="ci" class="form-control" id="ci" />
+				</div>
+                
 				<div class="form-group">
-					 <label for="ci">Nombre Evento</label><input type="text" class="form-control" id="ne" name="ne" /> </div>
-
+					 <label align="center" for="">Nombre</label><input type="text" name="nom" class="form-control" id="nom" />
+				</div>
 				<div class="form-group">
-					<label for="form-control">Censura</label>
-					<select class="form-control" name="cen">
-  					<option value="A">A</option>
-  					<option value="B">B</option>
-                    <option value="B-15">B-15</option>
-  					<option value="C">C</option>
- 				 	
- 				 	</select>
+					 <label for="">Apellido</label><input type="text" class="form-control" name="ap" id="ap" />
+				</div>
+                
+                <div class="form-group">
+					<label for="form-control">Genero</label>
+					<select class="form-control" name="g">
+  					<option value="F">F</option>
+  					<option value="M">M</option>
+                    </select>
 					</div>
                     
                     <div class="form-group">
-					<label for="form-control">Categoria</label>
-					<select class="form-control" name="cat">
-  					<option value="TEATRO">TEATRO</option>
-  					<option value="MUSICA">MUSICA</option>
-                    <option value="ESPECIAL">ESPECIAL</option>
-  					<option value="DEPORTE">DEPORTE</option>
- 				 	
- 				 	</select>
-					</div>
-
-						 <div class="form-group">
-					<label for="form-control">Genero</label>
-					<select class="form-control" name="g">
-  					<option value="1">1</option>
-  					<option value="2">2</option>
-                    <option value="3">3</option>
-  					<option value="4">4</option>
- 				 	
- 				 	</select>
-					</div>
-
-						<div class="form-group">
-					<label for="">Descripcion</label> <textarea class="form-control" rows="3" name="desc"></textarea></div>
-
-
-
-					 
-
-					 	  
-
- 				 	 <?php /*  Call merged included template "ComboPaises.tpl" */
+					 <label align="center" for="">Telefono Oficina</label><input type="text" name="telo" class="form-control" id="telp" />
+				</div>
+				<div class="form-group">
+					 <label for="">Telefono Casa</label><input type="text" class="form-control" name="telc" id="telc" />
+				</div>
+                
+                <div class="form-group">
+					 <label for="">Telefono Celular</label><input type="text" class="form-control" name="telcel" id="telcel" />
+				</div>
+               
+                <div class="form-group">
+					 <label for="">Correo Electronico</label><input type="text" class="form-control" name="correo" id="correo" />
+				</div>
+                
+                <div class="form-group">
+					 <label for="">Clave</label><input type="text" class="form-control" name="clave" id="clave" />
+				</div>
+                
+                <div class="form-group">
+                <div>
+                <label for="">Fecha Nacimiento</label><input type="date" class="form-control" name="fn" id="fn" />
+				</div>
+                
+                
+                <div class="form-group">
+                <div>
+                <label for="">Nacionalidad</label><input type="text" class="form-control" name="nac" id="nac" />
+				</div>
+                
+                <div class="form-group">
+                <div>
+                <label for="">Calle</label><input type="text" class="form-control" name="calle" id="calle" />
+				</div>
+                
+                <div class="form-group">
+					 <label for="">Edificio</label><input type="text" class="form-control" name="ed" id="ed" />
+				</div>
+                <div class="form-group">
+					 <label for="">Urbanizaciion</label><input type="text" class="form-control" name= "urb" id="urb" />
+				</div>
+                <div>
+                
+                <?php /*  Call merged included template "ComboPaises.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("ComboPaises.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '143952deb8ca6213d4-77378893');
-content_52e0124e9bbc30_64753832($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("ComboPaises.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1504052dff5c83c9492-03731491');
+content_52dffcc718aed9_93286604($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "ComboPaises.tpl" */?>
 
-
- 				 	 <br>
-
- 				 	 		<button type="submit" class="btn btn-default">Agregar</button>
+				</div>
+				
+				<div class="checkbox">
+					 
+				</div> <button type="submit" class="btn btn-default">Agregar</button>
 			</form>
 		</div>
 	</div>
-
-
-
-
-			
 </div>
-	    
-	
+
+
     
 
         
@@ -186,15 +203,15 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "ComboPaises
                  
             <?php /*  Call merged included template "footer.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '143952deb8ca6213d4-77378893');
-content_52e0124ea01a23_62703335($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1504052dff5c83c9492-03731491');
+content_52dffcc71b6673_66256217($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "footer.tpl" */?>
         
 </body>
 
-</html><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-22 19:47:42
+</html><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-22 18:15:51
          compiled from "view\templates\top_menu.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_52e0124e952109_78394323')) {function content_52e0124e952109_78394323($_smarty_tpl) {?><div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<?php if ($_valid && !is_callable('content_52dffcc7156849_65745325')) {function content_52dffcc7156849_65745325($_smarty_tpl) {?><div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -222,9 +239,9 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "footer.tpl"
       </form>
     </div><!--/.navbar-collapse -->
   </div>
-</div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-22 19:47:42
+</div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-22 18:15:51
          compiled from "view\templates\ComboPaises.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_52e0124e9bbc30_64753832')) {function content_52e0124e9bbc30_64753832($_smarty_tpl) {?> 
+<?php if ($_valid && !is_callable('content_52dffcc718aed9_93286604')) {function content_52dffcc718aed9_93286604($_smarty_tpl) {?> 
  <label for="">Seleccione Pais</label>
                 
                 <select class="form-control"  name="pais" id="pais"onchange="$.post( 'CiudadesPais.php', { pais: $('#pais').val()}, function( data ) {$('#ciudades').html( data );} ); "> 
@@ -244,8 +261,8 @@ $_smarty_tpl->tpl_vars['Lugar']->_loop = true;
 				</select>
                 <br/>
                 <div id="ciudades">
-				</div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-22 19:47:42
+				</div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-22 18:15:51
          compiled from "view\templates\footer.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_52e0124ea01a23_62703335')) {function content_52e0124ea01a23_62703335($_smarty_tpl) {?><footer style="" class="container">
+<?php if ($_valid && !is_callable('content_52dffcc71b6673_66256217')) {function content_52dffcc71b6673_66256217($_smarty_tpl) {?><footer style="" class="container">
         <p align="center">© Ticketes 2014</p>
 </footer><?php }} ?>

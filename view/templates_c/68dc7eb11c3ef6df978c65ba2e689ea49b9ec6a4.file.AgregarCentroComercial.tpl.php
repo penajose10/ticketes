@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-22 19:47:42
-         compiled from "view\templates\AgregarEvento.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:143952deb8ca6213d4-77378893%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-22 19:26:08
+         compiled from "view\templates\AgregarCentroComercial.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:2067552e00d40698c79-39283761%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '269775aeac46eb00745560109e4992ccace306d9' => 
+    '68dc7eb11c3ef6df978c65ba2e689ea49b9ec6a4' => 
     array (
-      0 => 'view\\templates\\AgregarEvento.tpl',
-      1 => 1390405614,
+      0 => 'view\\templates\\AgregarCentroComercial.tpl',
+      1 => 1390414951,
       2 => 'file',
     ),
     '66a8c2ff066aaf66c9998bd03de492a82f694cc6' => 
@@ -35,12 +35,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '143952deb8ca6213d4-77378893',
+  'nocache_hash' => '2067552e00d40698c79-39283761',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52deb8ca786583_73701945',
   'variables' => 
   array (
     'css' => 0,
@@ -49,8 +47,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'info_message' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52e00d40860a37_46129158',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52deb8ca786583_73701945')) {function content_52deb8ca786583_73701945($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_52e00d40860a37_46129158')) {function content_52e00d40860a37_46129158($_smarty_tpl) {?><!DOCTYPE html>
 <!--[if IE 7 ]><html class="ie ie7" lang="en"><![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"><![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
@@ -80,8 +80,8 @@ bootstrap.min.js"></script>
     
             <?php /*  Call merged included template "top_menu.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("top_menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '143952deb8ca6213d4-77378893');
-content_52e0124e952109_78394323($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("top_menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '2067552e00d40698c79-39283761');
+content_52e00d407a6c76_38994431($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "top_menu.tpl" */?>
     
 
@@ -104,80 +104,40 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "top_menu.tp
     
     <div class="container">
         
-	  
-	<br/>
-	<br/>
-<div class="container">
+  <div class="jumbotron">
+      <div class="container">
+        <h1>Agregar Un Nuevo Recinto</h1>
+        <p>aqui para ingresar</p>
+        <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div>
+    <div class="container">
 	<div class="row clearfix">
-		<div class="col-md-12 column">
-			<h1>Agregar Evento</h1>
-			<form role="form"   action="InsertarEvento.php" method="POST">
+		<div class="col-md-4 column">
+			<form role="form" action="InsertarCentroComercial.php" method="post">
 				<div class="form-group">
-					 <label for="ci">Nombre Evento</label><input type="text" class="form-control" id="ne" name="ne" /> </div>
-
-				<div class="form-group">
-					<label for="form-control">Censura</label>
-					<select class="form-control" name="cen">
-  					<option value="A">A</option>
-  					<option value="B">B</option>
-                    <option value="B-15">B-15</option>
-  					<option value="C">C</option>
- 				 	
- 				 	</select>
-					</div>
-                    
-                    <div class="form-group">
-					<label for="form-control">Categoria</label>
-					<select class="form-control" name="cat">
-  					<option value="TEATRO">TEATRO</option>
-  					<option value="MUSICA">MUSICA</option>
-                    <option value="ESPECIAL">ESPECIAL</option>
-  					<option value="DEPORTE">DEPORTE</option>
- 				 	
- 				 	</select>
-					</div>
-
-						 <div class="form-group">
-					<label for="form-control">Genero</label>
-					<select class="form-control" name="g">
-  					<option value="1">1</option>
-  					<option value="2">2</option>
-                    <option value="3">3</option>
-  					<option value="4">4</option>
- 				 	
- 				 	</select>
-					</div>
-
-						<div class="form-group">
-					<label for="">Descripcion</label> <textarea class="form-control" rows="3" name="desc"></textarea></div>
-
-
-
-					 
-
-					 	  
-
- 				 	 <?php /*  Call merged included template "ComboPaises.tpl" */
+					 <label align="center" for="">Nombre Centro Comercial</label><input type="text" name="ncc" class="form-control" id="ncc" />
+				</div>
+				
+                <div>
+                
+                <?php /*  Call merged included template "ComboPaises.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("ComboPaises.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '143952deb8ca6213d4-77378893');
-content_52e0124e9bbc30_64753832($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("ComboPaises.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '2067552e00d40698c79-39283761');
+content_52e00d40803df6_05956283($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "ComboPaises.tpl" */?>
 
-
- 				 	 <br>
-
- 				 	 		<button type="submit" class="btn btn-default">Agregar</button>
+				</div>
+				
+				<div class="checkbox">
+					 
+				</div> <button type="submit" class="btn btn-default">Agregar</button>
 			</form>
 		</div>
 	</div>
-
-
-
-
-			
 </div>
-	    
-	
+
+
     
 
         
@@ -186,15 +146,15 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "ComboPaises
                  
             <?php /*  Call merged included template "footer.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '143952deb8ca6213d4-77378893');
-content_52e0124ea01a23_62703335($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '2067552e00d40698c79-39283761');
+content_52e00d4084b168_22296175($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "footer.tpl" */?>
         
 </body>
 
-</html><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-22 19:47:42
+</html><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-22 19:26:08
          compiled from "view\templates\top_menu.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_52e0124e952109_78394323')) {function content_52e0124e952109_78394323($_smarty_tpl) {?><div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<?php if ($_valid && !is_callable('content_52e00d407a6c76_38994431')) {function content_52e00d407a6c76_38994431($_smarty_tpl) {?><div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -222,9 +182,9 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "footer.tpl"
       </form>
     </div><!--/.navbar-collapse -->
   </div>
-</div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-22 19:47:42
+</div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-22 19:26:08
          compiled from "view\templates\ComboPaises.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_52e0124e9bbc30_64753832')) {function content_52e0124e9bbc30_64753832($_smarty_tpl) {?> 
+<?php if ($_valid && !is_callable('content_52e00d40803df6_05956283')) {function content_52e00d40803df6_05956283($_smarty_tpl) {?> 
  <label for="">Seleccione Pais</label>
                 
                 <select class="form-control"  name="pais" id="pais"onchange="$.post( 'CiudadesPais.php', { pais: $('#pais').val()}, function( data ) {$('#ciudades').html( data );} ); "> 
@@ -244,8 +204,8 @@ $_smarty_tpl->tpl_vars['Lugar']->_loop = true;
 				</select>
                 <br/>
                 <div id="ciudades">
-				</div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-22 19:47:42
+				</div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-22 19:26:08
          compiled from "view\templates\footer.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_52e0124ea01a23_62703335')) {function content_52e0124ea01a23_62703335($_smarty_tpl) {?><footer style="" class="container">
+<?php if ($_valid && !is_callable('content_52e00d4084b168_22296175')) {function content_52e00d4084b168_22296175($_smarty_tpl) {?><footer style="" class="container">
         <p align="center">© Ticketes 2014</p>
 </footer><?php }} ?>

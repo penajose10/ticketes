@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 19:56:58
+=======
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 07:50:26
+>>>>>>> eb4f043af493656474c917d593540f3bc3112d68
          compiled from "view\templates\ComboEliminarRecinto.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1827352dc54e73895e6-29602655%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,25 +11,29 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ab703c88e1535d3e38a4d70242f716dd78323c34' => 
     array (
       0 => 'view\\templates\\ComboEliminarRecinto.tpl',
+<<<<<<< HEAD
       1 => 1390251021,
+=======
+      1 => 1390287006,
+>>>>>>> eb4f043af493656474c917d593540f3bc3112d68
       2 => 'file',
     ),
     '66a8c2ff066aaf66c9998bd03de492a82f694cc6' => 
     array (
       0 => 'view\\templates\\base.tpl',
-      1 => 1390154903,
+      1 => 1390166380,
       2 => 'file',
     ),
     '884f48beb8209f6d8de3a031ff4e96496a091e30' => 
     array (
       0 => 'view\\templates\\top_menu.tpl',
-      1 => 1390151983,
+      1 => 1390152009,
       2 => 'file',
     ),
     'abaa0c9ef9ab3c0865d3c824fe63b3bdf32d0ce2' => 
     array (
       0 => 'view\\templates\\footer.tpl',
-      1 => 1390154952,
+      1 => 1390166380,
       2 => 'file',
     ),
   ),
@@ -75,7 +83,11 @@ bootstrap.min.js"></script>
             <?php /*  Call merged included template "top_menu.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("top_menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1827352dc54e73895e6-29602655');
+<<<<<<< HEAD
 content_52dec2fa5e98e8_91396424($_smarty_tpl);
+=======
+content_52de18b2286aa1_65272666($_smarty_tpl);
+>>>>>>> eb4f043af493656474c917d593540f3bc3112d68
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "top_menu.tpl" */?>
     
 
@@ -135,14 +147,24 @@ $_smarty_tpl->tpl_vars['Recinto']->_loop = true;
             <?php /*  Call merged included template "footer.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1827352dc54e73895e6-29602655');
+<<<<<<< HEAD
 content_52dec2fa660c97_77907426($_smarty_tpl);
+=======
+content_52de18b22baea4_75581249($_smarty_tpl);
+>>>>>>> eb4f043af493656474c917d593540f3bc3112d68
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "footer.tpl" */?>
         
 </body>
 
+<<<<<<< HEAD
 </html><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 19:56:58
          compiled from "view\templates\top_menu.tpl" */ ?>
 <?php if ($_valid && !is_callable('content_52dec2fa5e98e8_91396424')) {function content_52dec2fa5e98e8_91396424($_smarty_tpl) {?><div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+=======
+</html><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 07:50:26
+         compiled from "view\templates\top_menu.tpl" */ ?>
+<?php if ($_valid && !is_callable('content_52de18b2286aa1_65272666')) {function content_52de18b2286aa1_65272666($_smarty_tpl) {?><div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+>>>>>>> eb4f043af493656474c917d593540f3bc3112d68
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -170,8 +192,14 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "footer.tpl"
       </form>
     </div><!--/.navbar-collapse -->
   </div>
+<<<<<<< HEAD
 </div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 19:56:58
          compiled from "view\templates\footer.tpl" */ ?>
 <?php if ($_valid && !is_callable('content_52dec2fa660c97_77907426')) {function content_52dec2fa660c97_77907426($_smarty_tpl) {?><footer style="" class="container">
+=======
+</div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 07:50:26
+         compiled from "view\templates\footer.tpl" */ ?>
+<?php if ($_valid && !is_callable('content_52de18b22baea4_75581249')) {function content_52de18b22baea4_75581249($_smarty_tpl) {?><footer style="" class="container">
+>>>>>>> eb4f043af493656474c917d593540f3bc3112d68
         <p align="center">© Ticketes 2014</p>
 </footer><?php }} ?>

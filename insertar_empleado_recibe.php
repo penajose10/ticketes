@@ -6,8 +6,12 @@ include_once Smarty_Include;
 include_once Smarty_Conf;
 include_once Empleado;
 
-print_r($_POST);
+//print_r($_POST);
 
-EMPLEADO::agregar_empleado($_POST['ci'],$_POST['nombre'],$_POST['apellido'],'aa','aa','cc','ff','gg','M','01/01/2005','01/01/2008','SI','CALL CENTER','qq');
+EMPLEADO::agregar_empleado($_POST['ci'],$_POST['nombre'],$_POST['apellido'],$_POST['calle'],$_POST['urb'],$_POST['edf'],$_POST['sexo'],$_POST['fecha_nac'],$_POST['fecha_trabajo'],$_POST['jefe'],$_POST['tipo'],$_POST['nivel_est'],$_POST['pais'],$_POST['ciudad'],$_POST['nickname'],$_POST['correo'],$_POST['clave']);
+
+
+header('location:agregar_empleado.php');
+
 
 ?>

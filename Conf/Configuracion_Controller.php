@@ -27,6 +27,9 @@ define("Recinto","model/Recinto.php");
 define("Empleado","model/empleado.php");
 define("Proveedor","model/Proveedor.php");
 define("Evento","model/Evento.php");
+define("Consumidor","model/Consumidor.php");
+define("Cliente","model/Cliente.php");
+define("CentroComercial","model/CentroComercial.php");
 
 
 /* Uploads*/

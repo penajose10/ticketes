@@ -3,7 +3,7 @@
 include_once 'Util_Database.php';
 include_once 'Util_String.php';
 
-define ('consumidores','select* from Consumidor');
+define ('consumidores','select* from CONSUMIDOR');
 define("agregarCon","INSERT INTO CONSUMIDOR  values (con_codigo.nextval,'%','%','%','%',%,%,%,'%',to_date('%','yyyy-mm-dd'),'%','%','%','%',%,%)");
 define("actualizaCon","UPDATE CONSUMIDOR SET con_ci=%, con_nombre='%',con_apellido='%',con_sexo='%',con_telefono_oficina=%,con_telefono_casa=%, con_telefono_celular=%, con_correo='%',con_Fecha_Nacimiento=to_date('%','yyyy-mm-dd'), con_nacionalidad='%',con_calle='%',con_edificio='%', con_urbanizacion='%',con_fk_lugar=%,con_clave=% where con_codigo=%");
 define("eliminarCon","DELETE FROM CONSUMIDOR where con_codigo=%");
@@ -35,8 +35,8 @@ abstract class Consumidor extends Util_Database {
 public static function ConsumidorN(){
 
 $con =Consumidor::execute_select(consumidores);
-
-print_r($con);
+ return $con;
+//print_r($con);
 
 }
   
