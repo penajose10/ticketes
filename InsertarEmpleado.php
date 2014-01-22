@@ -3,9 +3,9 @@
 include_once 'Conf/Configuracion.php';
 include_once 'Conf/Conf_Local.php';
 
-include_once Zona;
+include_once Empleado;
 
-ZONA::agregar($_POST['ci'],$_POST['nombre'],$_POST['apellido'],$_POST['c'],$_POST['urb'],$_POST['ed'],'M','09/09/1999','09/10/2013','NO','STAND','EST',1,1);
+//EMPLEADO::agregar_empleado($_POST['ci'],$_POST['nombre'],$_POST['apellido'],$_POST['c'],$_POST['urb'],$_POST['ed'],$_POST['sexo'],$_POST['fecha_nac'],$_POST['fecha_trabajo'],$_POST['jefe'],$_POST['tipo'],$_POST['nivel_est'],1,1);
 
 
 

@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-22 04:05:49
-         compiled from "view\templates\ComboEditarRecinto.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2084452dc43b36c5606-24865270%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 07:55:58
+         compiled from "view\templates\ComboEliminarEmpleado.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:2831852de1085223f11-94050854%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '1691d533818ef58de62602b35c8c567bf4233476' => 
+    '700f5e0b892fb43670bec049a5dcc9c1d6a7afe8' => 
     array (
-      0 => 'view\\templates\\ComboEditarRecinto.tpl',
-      1 => 1390350242,
+      0 => 'view\\templates\\ComboEliminarEmpleado.tpl',
+      1 => 1390287297,
       2 => 'file',
     ),
     '66a8c2ff066aaf66c9998bd03de492a82f694cc6' => 
@@ -29,12 +29,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2084452dc43b36c5606-24865270',
+  'nocache_hash' => '2831852de1085223f11-94050854',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52dc43b37b3f18_36316088',
+  'unifunc' => 'content_52de10852bee59_62495274',
   'variables' => 
   array (
     'css' => 0,
@@ -44,7 +44,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52dc43b37b3f18_36316088')) {function content_52dc43b37b3f18_36316088($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_52de10852bee59_62495274')) {function content_52de10852bee59_62495274($_smarty_tpl) {?><!DOCTYPE html>
 <!--[if IE 7 ]><html class="ie ie7" lang="en"><![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"><![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
@@ -74,8 +74,8 @@ bootstrap.min.js"></script>
     
             <?php /*  Call merged included template "top_menu.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("top_menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '2084452dc43b36c5606-24865270');
-content_52df358d67e303_94028424($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("top_menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '2831852de1085223f11-94050854');
+content_52de19fe5acb88_79186819($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "top_menu.tpl" */?>
     
 
@@ -99,27 +99,36 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "top_menu.tp
     <div class="container">
         
 <br />
+
+<br>
 <br /><br />
- <label for="">Seleccione Recinto a Modificar</label>
-                
-                <select class="form-control"  name="recinto" id="recinto"onchange="$.post( 'RecintoDetalle.php', { recinto: $('#recinto').val()}, function( data ) {$('#recinto_d').html( data );} ); "> 
+
+
+
+<br>
+ <label for="">Seleccione Empleado a Eliminar</label>
+               
+               <form role="form" action="BorrarEmpleado.php" method="post">
+                <select class="form-control"  name="empleado" id="empleado">
                 
                  <option value="">--------</option> 
-  							<?php  $_smarty_tpl->tpl_vars['Recinto'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['Recinto']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['Recintos']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['Recinto']->key => $_smarty_tpl->tpl_vars['Recinto']->value){
-$_smarty_tpl->tpl_vars['Recinto']->_loop = true;
+  							<?php  $_smarty_tpl->tpl_vars['empleado'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['empleado']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['empleados']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['empleado']->key => $_smarty_tpl->tpl_vars['empleado']->value){
+$_smarty_tpl->tpl_vars['empleado']->_loop = true;
 ?>  
                             
                             
-         <option value="<?php echo $_smarty_tpl->tpl_vars['Recinto']->value['REC_CODIGO'];?>
-"> <?php echo $_smarty_tpl->tpl_vars['Recinto']->value['REC_NOMBRE'];?>
+         <option value="<?php echo $_smarty_tpl->tpl_vars['empleado']->value['EMP_ID'];?>
+"> <?php echo $_smarty_tpl->tpl_vars['empleado']->value['EMP_NOMBRE'];?>
 </option> 
      <?php } ?>
 				</select>
                 <br/>
-                <div id="recinto_d">
-				</div>
+                
+				<div class="checkbox">
+					 
+				</div> <button type="submit" class="btn btn-default">Borrar</button>
                 
                 
     
@@ -130,15 +139,15 @@ $_smarty_tpl->tpl_vars['Recinto']->_loop = true;
                  
             <?php /*  Call merged included template "footer.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '2084452dc43b36c5606-24865270');
-content_52df358d6b68d0_49802330($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '2831852de1085223f11-94050854');
+content_52de19fe5e0c60_04202285($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "footer.tpl" */?>
         
 </body>
 
-</html><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-22 04:05:49
+</html><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 07:55:58
          compiled from "view\templates\top_menu.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_52df358d67e303_94028424')) {function content_52df358d67e303_94028424($_smarty_tpl) {?><div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<?php if ($_valid && !is_callable('content_52de19fe5acb88_79186819')) {function content_52de19fe5acb88_79186819($_smarty_tpl) {?><div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -166,8 +175,8 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "footer.tpl"
       </form>
     </div><!--/.navbar-collapse -->
   </div>
-</div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-22 04:05:49
+</div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 07:55:58
          compiled from "view\templates\footer.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_52df358d6b68d0_49802330')) {function content_52df358d6b68d0_49802330($_smarty_tpl) {?><footer style="" class="container">
+<?php if ($_valid && !is_callable('content_52de19fe5e0c60_04202285')) {function content_52de19fe5e0c60_04202285($_smarty_tpl) {?><footer style="" class="container">
         <p align="center">© Ticketes 2014</p>
 </footer><?php }} ?>

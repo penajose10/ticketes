@@ -64,6 +64,11 @@ abstract class Recinto extends Util_DataBase {
 				Recinto::execute_query($query);
 				
 			}
+
+
+
+		
+
 }
     
 	//Recinto::eliminarR(21);
