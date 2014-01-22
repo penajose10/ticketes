@@ -20,7 +20,8 @@ define("user_directory","../uploads/");
 define("client_directory","../uploads/clients/");
 
 /* Rutas Model */
-define("User","../model/User.php");
+define("User","model/User.php");
+define("Zona","model/Zona.php");
 define("Util_File","../model/Util_File.php");
 define("Util_Email","../model/Util_Email.php");
 define("Util_Cms","../model/Util_Cms.php");

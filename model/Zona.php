@@ -3,99 +3,64 @@
 include_once 'Util_Database.php';
 include_once 'Util_String.php';
 
-define ('zonas','select* from ZONA');
-define('Recinto_nombre',"select* from CENTRO_COMERCIAL where 'Reg_nombre='%' AND apellido='%'");
-define("agregar_empl","INSERT INTO EMPLEADO  values (Emp_id.nextval,'%','%','%','%','%','%','%', to_date('%','dd/mm/yyyy'),to_date('%','dd/mm/yyyy'),'%','%','%')");
-define("actualiza_emp","UPDATE EMPLEADO SET emp_Nombre='%' where emp_id=%");
-define("eliminar_emp","DELETE FROM EMPLEADO where emp_id=%");
+define ("agregar_zona","insert into ZONA values(z_codigo.nextval,%,%,'%')");
+define ("eliminar_zona","delete from ZONA where z_codigo=%");
+define ("modificar_zona","update ZONA set z_nombre='%' where z_codigo=%");
+
+
 
 
 
 abstract class ZONA extends Util_Database {
     
-    private $Cod_zona;
-    private $fk_Cod_recinto;
-    private $fk_Cod_sala;
+    private $z_codigo;
+	private $z_fk_sala;
+    private $z_fk_recinto;
+	private $z_nombre;
+    
 
 
-public static function F_zona(){
+public static function agregar_zona ($z_fk_sala,$z_fk_recinto,$z_nombre) {
+	
+	$valores= array ();
+	$valores[0]=$z_fk_sala;
+	$valores[1]=$z_fk_recinto;
+	$valores[2]=$z_nombre;
+	
+$query=Util_String::concatenate(agregar_zona,$valores);
+//echo $query ;
+Zona::execute_query($query);
+print $query;
+}
 
-$zona =ZONA::execute_select(zonas);
+public static function eliminar_zona($z_codigo){
 
-print_r($zona);
+$values = array();
+$values[0]= $z_codigo;
 
+
+
+$query= Util_String::concatenate(eliminar_zona, $values);
+ print $query;
+ Zona::execute_query($query);
+}
+
+public static function modificar_zona($z_nombre,$z_codigo){
+
+$values = array();
+$values[0]= $z_nombre;
+$values[1]= $z_codigo;
+
+$query= Util_String::concatenate(modificar_zona, $values);
+ print $query;
+ Zona::execute_query($query);
+}
+
+
+  
 }
   
-
-  public static function f_rec_nombre($nombrerecinto, $apellido){
-
-$values = array();
-$values[0]= $nombrerecinto;
-$values[1]= $apellido;
-$query= Util_String::concatenate(Recinto_nombre, $values);
- print $query;
-
-}
-
- public static function agregar($ci,$nombre,$apellido,$calle,$urb,$edif,$sexo,$fenac,$fetra,$empjefe,$tipo,$nivelest){
-
-$values = array();
-$values[0]= $ci;
-$values[1]= $nombre;
-$values[2]= $apellido;
-$values[3]= $calle;
-$values[4]= $urb;
-$values[5]= $edif;
-$values[6]= $sexo;
-$values[7]= $fenac;
-$values[8]= $fetra;
-$values[9]= $empjefe;
-$values[10]= $tipo;
-$values[11]= $nivelest;
-$query= Util_String::concatenate(agregar_empl, $values);
- print $query;
- ZONA::execute_query($query);
-
-}
-
-
-
-
-
-public static function actualizar($empnombre,$id){
-
-$values = array();
-$values[0]= $empnombre;
-$values[1]= $id;
-
-
-$query= Util_String::concatenate(actualiza_emp, $values);
- print $query;
- ZONA::execute_query($query);
-}
-
-
-
-public static function eliminar($id){
-
-$values = array();
-$values[0]= $id;
-
-
-
-$query= Util_String::concatenate(eliminar_emp, $values);
- print $query;
- ZONA::execute_query($query);
-}
-
-
-}
-
-
-ZONA::eliminar(21);
-
-
-
-
-
+//Zona::agregar_zona(42,2,'zooloo uno')
+//Zona::eliminar_zona(7)
+Zona::modificar_zona('modificada zona',9)
 ?> 

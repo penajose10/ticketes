@@ -4,6 +4,8 @@ include_once 'Util_String.php';
 
 define ("agregar_evento","insert into EVENTO values (e_codigo.nextval,'%','%','%','%','%',%,%,%)");
 define ("eliminar_evento","delete from EVENTO where e_codigo=%");
+define ("modificar_evento","update set e_nombre='%',e_censura='%',e_categoria='%',e_genero='%',e_descripcion='%' from EVENTO where e_codigo=%");
+
 
 abstract class Evento extends Util_Database {
 	private $codigo;
@@ -30,6 +32,7 @@ $query=Util_String::concatenate(agregar_evento,$valores);
 echo $query;
 Evento::execute_query($query);
 }
+
 public static function elimiar_evento ($codigo) {
 	
 	$valores= array ();
@@ -40,7 +43,24 @@ $query=Util_String::concatenate(eliminar_evento,$valores);
 echo $query;
 Evento::execute_query($query);
 }
+public static function modificar_evento ($nombre,$censura,$categoria,$genero,$descripcion,$codigo) {
+	
+	$valores= array ();
+	$valores[0]=$nombre;
+	$valores[1]=$censura;
+	$valores[2]=$categoria;
+	$valores[3]=$genero;
+	$valores[4]=$descripcion;
+	$valores[5]=$codigo;
+	
+
+
+$query=Util_String::concatenate(modificar_evento,$valores);
+echo $query;
+Evento::execute_query($query);
 }
 
-Evento::agregar_evento('El proyecto','A','TEATRO','locura','toal',2,3,4);
+}
+
+//Evento::agregar_evento('El proyecto','A','TEATRO','locura','toal',2,3,4);
 ?>

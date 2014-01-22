@@ -6,7 +6,14 @@ include_once Smarty_Include;
 include_once Smarty_Conf;
 
 
-	
- $smarty->display(Template_Dir.'agregar_evento.tpl'); 
+
+
+
+  $smarty->assign("nombre_usuario", "ALEJANDRO" ); 
+  $smarty->display(Template_Dir.'agregar_empleado.tpl'); 
+
+
+
+
 
 ?>

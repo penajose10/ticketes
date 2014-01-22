@@ -2,42 +2,57 @@
 include_once 'Util_Database.php';
 include_once 'Util_String.php';
 
-define ("agregar_empleado","insert into to EMPLEADO values (EMPLEADOID.nextvalue,'%','%','%','%','%','%','%','%', to_date('DD/MM/YYYY,'%'), to_date('DD/MM/YYYY','%'),'%','%')");
+define ("agregar_sala","INSERT INTO SALA values (s_codigo.nextval,'%',%)");
+define ("modificar_sala","update SALA set s_nombre='%'where s_codigo=%");
+define ("eliminar_sala","delete from SALA where s_codigo=%");
 
-abstract class sala extends Util_Database {
-private $ci;
-private $nombre;
-private $apellido;
-private $calle;
-private $urb;
-private $edificio;
-private $sexo;
-private $fechanac;
-private $fechatra;
-private $jefe;
-private $tipo;
-private $estudio;
 
-public static function agregaremp ($ci,$nombre,$apellido,$calle,$urb,$edificio,$sexo,$fechanac,$fechatra,$jefe,$tipo,$estudio) {
+
+
+abstract class Sala extends Util_Database {
+private $s_codigo;
+private $s_nombre;
+private $s_fk_recinto;
+
+
+public static function agregar_sala ($nombre,$fk_recinto) {
 	$valores = array ();
-	$valores[0]=$ci;
-	$valores[1]=$nombre;
-	$valores[2]=$apellido;
-	$valores[3]=$calle;
-	$valores[4]=$urb;
-	$valores[5]=$edificio;
-	$valores[6]=$sexo;
-	$valores[7]=$fechanac;
-	$valores[8]=$fechatra;
-	$valores[9]=$jefe;
-	$valores[10]=$tipo;
-	$valores[11]=$estudio;
+	$values[0]=$nombre;
+	$values[1]=$fk_recinto;
 	
-$query=Util_String::concatenate(agregar_empleado,$valores);
-echo $query ;
-sala::execute_query($query);
+$query=Util_String::concatenate(agregar_sala,$values);
+//echo $query ;
+Sala::execute_query($query);
+print $query;
 }
+public static function modificar_sala($s_nombre,$s_codigo){
+
+$values = array();
+$values[0]= $s_nombre;
+$values[1]= $s_codigo;
+
+$query= Util_String::concatenate(modificar_sala, $values);
+ print $query;
+ Sala::execute_query($query);
 }
-sala::agregaremp(23,'jose','pena','tres','raiza','dos','m','31/08/2014','12/07/2014','si','des','bachi');
+
+public static function eliminar_sala($s_codigo){
+
+$values = array();
+$values[0]= $s_codigo;
+
+
+
+$query= Util_String::concatenate(eliminar_sala, $values);
+ print $query;
+ Sala::execute_query($query);
+}
+
+
+}
+
+//Sala::agregar_sala('la clara',2);
+//Sala::modificar_sala('las unicas',43);
+Sala::eliminar_sala(43);
 
 ?>
