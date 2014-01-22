@@ -156,46 +156,44 @@ insert into CENTRO_COMERCIAL values(cc_codigo.NEXTVAL,'Town Square',30);
 insert into CENTRO_COMERCIAL values(cc_codigo.NEXTVAL,'The Grand Canal',30);
 
 
-insert into EMPLEADO values (emp_id.NEXTVAL,19733605,'Jose Alejandro','Suarez Osuna','La Guairita','El Cafetal','Johaly','M',to_date('28/01/1991','dd/mm/yyyy'),to_date('15/04/2010','dd/mm/yyyy'),'SI','OFICINA','Ingeniero',null,1);
-insert into EMPLEADO values (emp_id.NEXTVAL,70334852,'Jose Miguel','Osuna','Ppal LLanito','Llanito','Cuyagua','M',to_date('23/07/1988','dd/mm/yyyy'),to_date('29/05/2012','dd/mm/yyyy'),'NO','OFICINA','Administrador',4,17);
-insert into EMPLEADO values (emp_id.NEXTVAL,19848884,'Diana','Ramirez','Paris','Las Mercedes','Cacique','F',to_date('01/03/1992','dd/mm/yyyy'),to_date('18/10/2011','dd/mm/yyyy'),'NO','OFICINA','Licenciada',4,1);
-insert into EMPLEADO values (emp_id.NEXTVAL,6161747,'Cipriano','Suarez','8','Montalban','Parque 4','M',to_date('03/11/1957','dd/mm/yyyy'),to_date('07/07/1980','dd/mm/yyyy'),'NO','OFICINA','Licenciado',4,1);
-insert into EMPLEADO values (emp_id.NEXTVAL,68157304,'Johaly','Osuna','solar','El Hatillo','Solar H','F',to_date('11/08/1963','dd/mm/yyyy'),to_date('12/12/1990','dd/mm/yyyy'),'NO','OFICINA','Abogada',4,19);
+insert into EMPLEADO values (emp_id.NEXTVAL,19733605,'Jose Alejandro','Suarez Osuna','La Guairita','El Cafetal','Johaly','M',to_date('28/01/1991','dd/mm/yyyy'),to_date('15/04/2010','dd/mm/yyyy'),'SI','OFICINA','Ingeniero',4,1,'jaso','ingjaso@hotmail.com','1234');
+insert into EMPLEADO values (emp_id.NEXTVAL,70334852,'Jose Miguel','Osuna','Ppal LLanito','Llanito','Cuyagua','M',to_date('23/07/1988','dd/mm/yyyy'),to_date('29/05/2012','dd/mm/yyyy'),'NO','OFICINA','Administrador',4,17,'jmoh','josem@hotmail.com','1234');
+insert into EMPLEADO values (emp_id.NEXTVAL,19848884,'Diana','Ramirez','Paris','Las Mercedes','Cacique','F',to_date('01/03/1992','dd/mm/yyyy'),to_date('18/10/2011','dd/mm/yyyy'),'NO','OFICINA','Licenciada',4,1,'dcrm','dianac@hotmail.com','1234');
+insert into EMPLEADO values (emp_id.NEXTVAL,6161747,'Cipriano','Suarez','8','Montalban','Parque 4','M',to_date('03/11/1957','dd/mm/yyyy'),to_date('07/07/1980','dd/mm/yyyy'),'NO','OFICINA','Licenciado',4,1,'csa','cipriano@hotmail.com','1234');
+insert into EMPLEADO values (emp_id.NEXTVAL,68157304,'Johaly','Osuna','solar','El Hatillo','Solar H','F',to_date('11/08/1963','dd/mm/yyyy'),to_date('12/12/1990','dd/mm/yyyy'),'NO','OFICINA','Abogada',4,19,'jmou','johalym@hotmail.com','1234');
 
-insert into EMPLEADO values (emp_id.NEXTVAL,54224896,'David','Poveda','San Casimiro','Cigarral','Los Pomelos','M',to_date('11/10/1990','dd/mm/yyyy'),to_date('22/03/1999','dd/mm/yyyy'),'SI','CALL CENTER','Ingeniero',null,19);
-insert into EMPLEADO values (emp_id.NEXTVAL,86390547,'Jose','Saco','Intercumunal Valle','EL Valle','Los Garay','M',to_date('20/04/1987','dd/mm/yyyy'),to_date('14/11/2000','dd/mm/yyyy'),'NO','CALL CENTER','Bachiller',5,17);
-insert into EMPLEADO values (emp_id.NEXTVAL,17123324,'Miguel','Graterol','PPAL de Coche','Coche','Hipodromo','M',to_date('19/06/1983','dd/mm/yyyy'),to_date('12/07/2001','dd/mm/yyyy'),'NO','CALL CENTER','Bachiller',5,1);
-insert into EMPLEADO values (emp_id.NEXTVAL,19245876,'Carolina','Ustariz','PPAL Bello Monte','Bello Monte','Las Famosas','F',to_date('17/09/1981','dd/mm/yyyy'),to_date('15/02/2010','dd/mm/yyyy'),'NO','CALL CENTER','TSU',5,1);
-insert into EMPLEADO values (emp_id.NEXTVAL,73456872,'Adriana','Da Rocha','Tambor','San Antonio','Los Pachecos','F',to_date('28/08/1991','dd/mm/yyyy'),to_date('06/05/2007','dd/mm/yyyy'),'NO','CALL CENTER','TSU',5,17);
+insert into EMPLEADO values (emp_id.NEXTVAL,54224896,'David','Poveda','San Casimiro','Cigarral','Los Pomelos','M',to_date('11/10/1990','dd/mm/yyyy'),to_date('22/03/1999','dd/mm/yyyy'),'SI','CALL CENTER','Ingeniero',5,19,'davidp','davidp@gmail.com','1234');
+insert into EMPLEADO values (emp_id.NEXTVAL,86390547,'Jose','Saco','Intercumunal Valle','EL Valle','Los Garay','M',to_date('20/04/1987','dd/mm/yyyy'),to_date('14/11/2000','dd/mm/yyyy'),'NO','CALL CENTER','Bachiller',5,17,'josec','panal@gmail.com','1234');
+insert into EMPLEADO values (emp_id.NEXTVAL,73456872,'Adriana','Da Rocha','Tambor','San Antonio','Los Pachecos','F',to_date('28/08/1991','dd/mm/yyyy'),to_date('06/05/2007','dd/mm/yyyy'),'NO','CALL CENTER','TSU',5,1,'caballota','caballota@gmail.com','1234');
 
-insert into EMPLEADO values (emp_id.NEXTVAL,17852963,'Jose Gregorio','Pena','Los Pranes','Ocumare','Los Santos','M',to_date('30/11/1985','dd/mm/yyyy'),to_date('02/01/2009','dd/mm/yyyy'),'SI','STAND','INGENIERO',null,1);
-insert into EMPLEADO values (emp_id.NEXTVAL,41066872,'Anibal','Dominguez','Sanz','Marquez','Aguacate','M',to_date('11/10/1981','dd/mm/yyyy'),to_date('04/04/1998','dd/mm/yyyy'),'NO','STAND','Edu Basica',9,13);
-insert into EMPLEADO values (emp_id.NEXTVAL,46874126,'Melanie','Godoy','Bolivar','Candelaria','El Salado','F',to_date('11/10/1994','dd/mm/yyyy'),to_date('05/05/2013','dd/mm/yyyy'),'NO','STAND','Bachiller',9,13);
-insert into EMPLEADO values (emp_id.NEXTVAL,13783644,'Nathalie','Texeira','Catia','Casalta I','D','F',to_date('22/08/1986','dd/mm/yyyy'),to_date('31/07/2003','dd/mm/yyyy'),'NO','STAND','Edu Basica',9,1);
-insert into EMPLEADO values (emp_id.NEXTVAL,88159357,'Manuel','Pacheco','Los Parce','San Martin','Alpes','M',to_date('06/05/1970','dd/mm/yyyy'),to_date('11/11/2013','dd/mm/yyyy'),'NO','STAND','Edu Basica',9,19);
+insert into EMPLEADO values (emp_id.NEXTVAL,17852963,'Jose Gregorio','Pena','Los Pranes','Ocumare','Los Santos','M',to_date('30/11/1985','dd/mm/yyyy'),to_date('02/01/2009','dd/mm/yyyy'),'SI','STAND','INGENIERO',9,1,'gordopena','gordopena@yahoo.com','1234');
+insert into EMPLEADO values (emp_id.NEXTVAL,41066872,'Anibal','Dominguez','Sanz','Marquez','Aguacate','M',to_date('11/10/1981','dd/mm/yyyy'),to_date('04/04/1998','dd/mm/yyyy'),'NO','STAND','Edu Basica',9,13,'pincho','pinchoma@yahoo.com','1234');
+insert into EMPLEADO values (emp_id.NEXTVAL,46874126,'Melanie','Godoy','Bolivar','Candelaria','El Salado','F',to_date('11/10/1994','dd/mm/yyyy'),to_date('05/05/2013','dd/mm/yyyy'),'NO','STAND','Bachiller',9,13,'melaniegodo','melaniegodo@yahoo.com','1234');
+insert into EMPLEADO values (emp_id.NEXTVAL,13783644,'Nathalie','Texeira','Catia','Casalta I','D','F',to_date('22/08/1986','dd/mm/yyyy'),to_date('31/07/2003','dd/mm/yyyy'),'NO','STAND','Edu Basica',9,1,'nathy','mecojiojaso@yahoo.com','1234');
+insert into EMPLEADO values (emp_id.NEXTVAL,88159357,'Manuel','Pacheco','Los Parce','San Martin','Alpes','M',to_date('06/05/1970','dd/mm/yyyy'),to_date('11/11/2013','dd/mm/yyyy'),'NO','STAND','Edu Basica',9,19,'pacheco','pacheco@yahoo.com','1234');
 
-insert into CONSUMIDOR values (con_codigo.NEXTVAL,6161454,'Ely','Arrioja','M',02431112468,02437823661,04121027098,'elyarrioja@hotmail.com',to_date('14/4/1959','dd/mm/yyyy'),'Venezolano','Las Delicias','bahareque','la soledad',1);
-insert into CONSUMIDOR values (con_codigo.NEXTVAL,5445518,'Jose','Uzcategui','M',02434547826,02449763045,04144139763,'Jose_arrioja@gmail.com',to_date('31/12/1965','dd/mm/yyyy'),'Venezolano','Ppal Turmero','Al Fin','Turmero',1);
-insert into CONSUMIDOR values (con_codigo.NEXTVAL,23366227,'Andrea','Castillo','F',02343247789,02345142122,04261011023,'Barbie33@outlook.com',to_date('25/12/1995','dd/mm/yyyy'),'Argentina','Las Minas','San Rafael','Las 3 Gracias',7);
-insert into CONSUMIDOR values (con_codigo.NEXTVAL,19735602,'legnamar','Fernandez','F',02344492135,02344523132,04161037877,'lalgenamar@yahoo.com',to_date('21/02/1992','dd/mm/yyyy'),'Argentina','la Villa','#8','pedragosa',7);
-insert into CONSUMIDOR values (con_codigo.NEXTVAL,17147258,'Rafael','Martinez','M',02748623536,02748542255,04164782790,'portero54@gmail.com',to_date('11/10/1989','dd/mm/yyyy'),'Chileno','las Acacias','#02','la azulita',13);
-insert into CONSUMIDOR values (con_codigo.NEXTVAL,21996885,'Mauricio','Hernandez','M',02647755124,02644496610,04122127730,'f16mauricio@hotmail.com',to_date('30/07/1993','dd/mm/yyyy'),'Chileno','Pedro Lares','Los Hijos','Cristal Alto',13);
-insert into CONSUMIDOR values (con_codigo.NEXTVAL,152285471,'Osmarly','Alvarez','F',02129882057,02124716428,04147237751,'model_osmy@hotmail.com',to_date('13/12/1987','dd/mm/yyyy'),'Colombiana','tumeremo','t&t','San Luis',19);
-insert into CONSUMIDOR values (con_codigo.NEXTVAL,16664215,'Gabriela','Rojas','F',02124427798,02126725370,04143266583,'gabyrojua@hotmail.com',to_date('07/05/1988','dd/mm/yyyy'),'Colombiana','Ppal El Valle','longarai','El Valle',19);
-insert into CONSUMIDOR values (con_codigo.NEXTVAL,19738607,'Deisy','Narvaez','F',02129875412,02129896532,04123375210,'deisycaro@hotmail.com',to_date('25/01/1991','dd/mm/yyyy'),'Americana','Ppal Naranjos','pomelos I','los Naranjos',25);
-insert into CONSUMIDOR values (con_codigo.NEXTVAL,21133600,'Jesus','Larez','M',0274542253,02743032010,04166092017,'jesuslarez2@yahoo.com',to_date('22/06/1995','dd/mm/yyyy'),'Americana','panettone','aveva','Mineros',25);
+insert into CONSUMIDOR values (con_codigo.NEXTVAL,6161454,'Ely','Arrioja','M',02431112468,02437823661,04121027098,'elyarrioja@hotmail.com',to_date('14/4/1959','dd/mm/yyyy'),'Venezolano','Las Delicias','bahareque','la soledad',9,1,'elya','1234');
+insert into CONSUMIDOR values (con_codigo.NEXTVAL,5445518,'Jose','Uzcategui','M',02434547826,02449763045,04144139763,'Jose_arrioja@gmail.com',to_date('31/12/1965','dd/mm/yyyy'),'Venezolano','Ppal Turmero','Al Fin','Turmero',9,1,'joseangel','1234');
+insert into CONSUMIDOR values (con_codigo.NEXTVAL,23366227,'Andrea','Castillo','F',02343247789,02345142122,04261011023,'Barbie33@outlook.com',to_date('25/12/1995','dd/mm/yyyy'),'Argentina','Las Minas','San Rafael','Las 3 Gracias',9,1,'andreada','1234');
+insert into CONSUMIDOR values (con_codigo.NEXTVAL,19735602,'legnamar','Fernandez','F',02344492135,02344523132,04161037877,'lalgenamar@yahoo.com',to_date('21/02/1992','dd/mm/yyyy'),'Argentina','la Villa','#8','pedragosa',9,1,'legna','1234');
+insert into CONSUMIDOR values (con_codigo.NEXTVAL,17147258,'Rafael','Martinez','M',02748623536,02748542255,04164782790,'portero54@gmail.com',to_date('11/10/1989','dd/mm/yyyy'),'Chileno','las Acacias','#02','la azulita',9,1,'juanga','1234');
+insert into CONSUMIDOR values (con_codigo.NEXTVAL,21996885,'Mauricio','Hernandez','M',02647755124,02644496610,04122127730,'f16mauricio@hotmail.com',to_date('30/07/1993','dd/mm/yyyy'),'Chileno','Pedro Lares','Los Hijos','Cristal Alto',9,1,'maguiber','1234');
+insert into CONSUMIDOR values (con_codigo.NEXTVAL,152285471,'Osmarly','Alvarez','F',02129882057,02124716428,04147237751,'model_osmy@hotmail.com',to_date('13/12/1987','dd/mm/yyyy'),'Colombiana','tumeremo','t&t','San Luis',9,1,'osmarly','1234');
+insert into CONSUMIDOR values (con_codigo.NEXTVAL,16664215,'Gabriela','Rojas','F',02124427798,02126725370,04143266583,'gabyrojua@hotmail.com',to_date('07/05/1988','dd/mm/yyyy'),'Colombiana','Ppal El Valle','longarai','El Valle',9,1,'marigabyroja','1234');
+insert into CONSUMIDOR values (con_codigo.NEXTVAL,19738607,'Deisy','Narvaez','F',02129875412,02129896532,04123375210,'deisycaro@hotmail.com',to_date('25/01/1991','dd/mm/yyyy'),'Americana','Ppal Naranjos','pomelos I','los Naranjos',9,1,'deisycaro','1234');
+insert into CONSUMIDOR values (con_codigo.NEXTVAL,21133600,'Jesus','Larez','M',0274542253,02743032010,04166092017,'jesuslarez2@yahoo.com',to_date('22/06/1995','dd/mm/yyyy'),'Americana','panettone','aveva','Mineros',9,1,'jesusita','1234');
 
-insert into CLIENTE values(cli_codigo.NEXTVAL,'NO APLICA','Nike','Compania Anonima',to_date('18/06/1971','dd/mm/yyyy'),'15550 SW Millikan Way','Beaverton','Nike Inc','CORPORATIVO',18,25);
-insert into CLIENTE values(cli_codigo.NEXTVAL,'NO APLICA','Colombina','Compania Anonima',to_date('25/08/1927','dd/mm/yyyy'),'carrera 1','Puente Comercio','24-56','CORPORATIVO',11,19);
-insert into CLIENTE values(cli_codigo.NEXTVAL,'NO APLICA','Telefonica Movistar Colombia','Sociedad Anonima',to_date('05/04/2005','dd/mm/yyyy'),'carrera 7','la gran via','99-21','CORPORATIVO',10,19);
-insert into CLIENTE values(cli_codigo.NEXTVAL,'J-30438493-9','Locatel','Compania Anonima',to_date('15/07/1979','dd/mm/yyyy'),'Vargas','Boleita Norte','Locatel','CORPORATIVO',14,1);
-insert into CLIENTE values(cli_codigo.NEXTVAL,'J-30963860-2','McDonalds','Compania Anonima',to_date('31/08/1985','dd/mm/yyyy'),'Av. Ppal. Manzanare','Manzanare','Centro Empresarial Manzanare','CORPORATIVO',15,1);
+insert into CLIENTE values(cli_codigo.NEXTVAL,'NO APLICA','Nike','Compania Anonima',to_date('18/06/1971','dd/mm/yyyy'),'15550 SW Millikan Way','Beaverton','Nike Inc','CORPORATIVO',25,4,1,'nike','nike@hotmail.com','1234');
+insert into CLIENTE values(cli_codigo.NEXTVAL,'NO APLICA','Colombina','Compania Anonima',to_date('25/08/1927','dd/mm/yyyy'),'carrera 1','Puente Comercio','24-56','CORPORATIVO',19,4,1,'colombina','colombina@hotmail.com','1234');
+insert into CLIENTE values(cli_codigo.NEXTVAL,'NO APLICA','Telefonica Movistar Colombia','Sociedad Anonima',to_date('05/04/2005','dd/mm/yyyy'),'carrera 7','la gran via','99-21','CORPORATIVO',19,4,1,'movistarc','movistarc@hotmail.com','1234');
+insert into CLIENTE values(cli_codigo.NEXTVAL,'J-30438493-9','Locatel','Compania Anonima',to_date('15/07/1979','dd/mm/yyyy'),'Vargas','Boleita Norte','Locatel','CORPORATIVO',1,4,1,'locatel','locatel@hotmail.com','1234');
+insert into CLIENTE values(cli_codigo.NEXTVAL,'J-30963860-2','McDonalds','Compania Anonima',to_date('31/08/1985','dd/mm/yyyy'),'Av. Ppal. Manzanare','Manzanare','Centro Empresarial Manzanare','CORPORATIVO',1,4,1,'mcdonal','mcdonal@hotmail.com','1234');
 
-insert into CLIENTE values(cli_codigo.NEXTVAL,'NO APLICA','Pixar','Compania Anonima',to_date('29/07/1986','dd/mm/yyyy'),'45th','Emeryville','Pixar','PRODUCTORA',19,25);
-insert into CLIENTE values(cli_codigo.NEXTVAL,'NO APLICA','Rodeblam Producciones','Compania Anonima',to_date('08/09/2000','dd/mm/yyyy'),'calle 18','Santa Elena','Rayda','PRODUCTORA',7,19);
-insert into CLIENTE values(cli_codigo.NEXTVAL,'NO APLICA','TeleVideo','Sociedad Anonima',to_date('21/01/1980','dd/mm/yyyy'),'transversal 22 Bis','Cundinamarca','60-60','PRODUCTORA',17,19);
-insert into CLIENTE values(cli_codigo.NEXTVAL,'J-31356572-5','Aguacate Producciones','Compania Anonima',to_date('13/12/2005','dd/mm/yyyy'),'Av. Venezuela con Av. Urdaneta','Los Libertadores','Centro comercial Tepuy','PRODUCTORA',15,1);
-insert into CLIENTE values(cli_codigo.NEXTVAL,'J-30356048-2','Solid Show','Compania Anonima',to_date('17/05/2002','dd/mm/yyyy'),' Luis De Camoens','La Trinidad','Centro clover','PRODUCTORA',15,1);
+insert into CLIENTE values(cli_codigo.NEXTVAL,'NO APLICA','Pixar','Compania Anonima',to_date('29/07/1986','dd/mm/yyyy'),'45th','Emeryville','Pixar','PRODUCTORA',25,5,19,'pixar','pixar@gmail.com','1234');
+insert into CLIENTE values(cli_codigo.NEXTVAL,'NO APLICA','Rodeblam Producciones','Compania Anonima',to_date('08/09/2000','dd/mm/yyyy'),'calle 18','Santa Elena','Rayda','PRODUCTORA',19,5,19,'rodeblan','rodeblan@gmail.com','1234');
+insert into CLIENTE values(cli_codigo.NEXTVAL,'NO APLICA','TeleVideo','Sociedad Anonima',to_date('21/01/1980','dd/mm/yyyy'),'transversal 22 Bis','Cundinamarca','60-60','PRODUCTORA',19,5,19,'televideo','televideo@gmail.com','1234');
+insert into CLIENTE values(cli_codigo.NEXTVAL,'J-31356572-5','Aguacate Producciones','Compania Anonima',to_date('13/12/2005','dd/mm/yyyy'),'Av. Venezuela con Av. Urdaneta','Los Libertadores','Centro comercial Tepuy','PRODUCTORA',1,5,19,'aguacate','aguacate@gmail.com','1234');
+insert into CLIENTE values(cli_codigo.NEXTVAL,'J-30356048-2','Solid Show','Compania Anonima',to_date('17/05/2002','dd/mm/yyyy'),' Luis De Camoens','La Trinidad','Centro clover','PRODUCTORA',1,5,19,'soloid','solidshow@gmail.com','1234');
 
 insert into PROVEEDOR values(prov_codigo.NEXTVAL,'J-30137013-9','Pepsico','2da. Avenida','Los Cortijos','Centro Empresarial Polar','Emilio Barajas', 02122023111,1);
 insert into PROVEEDOR values(prov_codigo.NEXTVAL,'J-00033800-0','Frito-lay','Avenida Francisco de Miranda','Campo Alegre','Torre Europa','Carlos Riera', 02129527534,1);
@@ -244,4 +242,4 @@ insert into stand values (s_codigo.NEXTVAL,'Stand3T','BOLETOS',0,0,to_date('03/0
 insert into stand values (s_codigo.NEXTVAL,'Stand4T','BOLETOS',0,0,to_date('03/01/2014','dd/mm/yyyy'),4,NULL);
 insert into stand values (s_codigo.NEXTVAL,'Stand5T','BOLETOS',0,0,to_date('03/01/2014','dd/mm/yyyy'),5,NULL);
 
-insert into orden_compra values(oc_numero.nextval,to_date('01/01/2014','dd/mm/yyyy'),20,50,1000,1)
+insert into orden_compra values(oc_numero.nextval,to_date('01/01/2014','dd/mm/yyyy'),20,50,1000,1);

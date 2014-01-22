@@ -8,7 +8,7 @@ include_once Lugar;
 
 
 
-$pais= Lugar::lugar_N_P(); 	
+  $pais= Lugar::lugar_N_P(); 	
   $smarty->assign("nombre_usuario", "ALEJANDRO" ); 
   $smarty->assign("pais", $pais);
   $smarty->display(Template_Dir.'agregar_empleado.tpl'); 

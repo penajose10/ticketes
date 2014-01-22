@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-19 23:25:26
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 06:26:31
          compiled from "view\templates\agregar_empleado.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2638852dc13b50f4716-65247706%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8efe79ccaf0dc007780404c7d7a5b383e03493c8' => 
     array (
       0 => 'view\\templates\\agregar_empleado.tpl',
-      1 => 1390170317,
+      1 => 1390281187,
       2 => 'file',
     ),
     '66a8c2ff066aaf66c9998bd03de492a82f694cc6' => 
@@ -81,7 +81,7 @@ bootstrap.min.js"></script>
             <?php /*  Call merged included template "top_menu.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("top_menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '2638852dc13b50f4716-65247706');
-content_52dc50d6bf4f88_51935937($_smarty_tpl);
+content_52de0507701399_38674424($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "top_menu.tpl" */?>
     
 
@@ -113,30 +113,30 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "top_menu.tp
 			<h1>Agregar Empleado</h1>
 			<form role="form"   action="insertar_empleado_recibe.php" method="POST">
 				<div class="form-group">
-					 <label for="ci">Cedula de Identidad</label><input type="text" class="form-control" id="ci" name="ci" /> </div>
+					 <label for="form-control">Cedula de Identidad</label><input type="text" class="form-control" id="ci" name="ci" /> </div>
 
 
 					<div class="form-group">
-					 <label for="nombre">Nombre</label><input type="text" class="form-control" id="nombre" name="nombre" /> </div>
+					 <label for="form-control">Nombre</label><input type="text" class="form-control" id="nombre" name="nombre" /> </div>
 
 
 					 <div class="form-group">
-					 <label for="apellido">Apellido</label><input type="text" class="form-control" id="apellido" name="apellido"/> </div>
-
-
-
-					 <div class="form-group">
-					 <label for="calle">Calle</label><input type="text" class="form-control" id="calle" name="calle" /> </div>
+					 <label for="form-control">Apellido</label><input type="text" class="form-control" id="apellido" name="apellido"/> </div>
 
 
 
 					 <div class="form-group">
-					 <label for="urb">Urbanizacion</label><input type="text" class="form-control" id="urb" name="urb" /> </div>
+					 <label for="form-control">Calle</label><input type="text" class="form-control" id="calle" name="calle" /> </div>
 
 
 
 					 <div class="form-group">
-					 <label for="edf">Edificion</label><input type="text" class="form-control" id="edf" name="edf" /> </div>
+					 <label for="form-control">Urbanizacion</label><input type="text" class="form-control" id="urb" name="urb" /> </div>
+
+
+
+					 <div class="form-group">
+					 <label for="form-control">Edificion</label><input type="text" class="form-control" id="edf" name="edf" /> </div>
 
                     
 					<label for="form-control">Sexo</label>
@@ -149,28 +149,56 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "top_menu.tp
 
  				 	
 					  <div class="form-group">
-					 <label for="fecha_nac">Fecha De Nacimiento</label><input type="date" class="form-control" id="fecha_nac" name="fecha_nac"/> </div>	
+					 <label for="form-control">Fecha De Nacimiento</label><input type="date" class="form-control" id="fecha_nac" name="fecha_nac"/> </div>	
 
 
 
 					 	  <div class="form-group">
-					 <label for="fecha_trabajo">Fecha De Trabajo</label><input type="date" class="form-control" id="fecha_trabajo"  name="fecha_trabajo"/> </div>
+					 <label for="form-control">Fecha De Trabajo</label><input type="date" class="form-control" id="fecha_trabajo"  name="fecha_trabajo"/> </div>
+
+
+
+					 <label for="form-control">Jefe?</label>
+					<select class="form-control" name="jefe">
+  					<option values="SI">SI</option>
+  					<option values="NO">NO</option>
+  					</select>
+
 
 
 
 					 	<label for="form-control">Tipo de Empleado</label>
 					<select class="form-control" name="tipo">
-  					<option>CALL CENTER</option>
-  					<option>OFICINA</option>
-  					<option>STAND</option>
+  					<option values="CALL CENTER">CALL CENTER</option>
+  					<option values="OFICINA">OFICINA</option>
+  					<option values="STAND">STAND</option>
  				 	
  				 	</select>
+
+
+ 				 		<div class="form-group">
+					 <label for="form-control">Nivel De Estudio</label><input type="text" class="form-control" id="nivel_est" name="nivel_est" /> </div>
+
+
 
  				 	 <?php /*  Call merged included template "ComboPaises.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("ComboPaises.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '2638852dc13b50f4716-65247706');
-content_52dc50d6c223c9_42326441($_smarty_tpl);
+content_52de0507738840_26484738($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "ComboPaises.tpl" */?>
+
+
+ 				 	 	<div class="form-group">
+					 <label for="form-control">Nickname</label><input type="text" class="form-control" id="nickname" name="nickname" /> </div>
+
+
+
+					 <div class="form-group">
+					 <label for="form-control">Correo Electronico</label><input type="text" class="form-control" id="correo" name="correo" /> </div>
+
+
+					 <div class="form-group">
+					 <label for="form-control">Clave</label><input type="password" class="form-control" id="clave" name="clave" /> </div>
 
 
  				 	 <br>
@@ -196,14 +224,14 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "ComboPaises
             <?php /*  Call merged included template "footer.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '2638852dc13b50f4716-65247706');
-content_52dc50d6c40445_47734517($_smarty_tpl);
+content_52de050775caa0_78321604($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "footer.tpl" */?>
         
 </body>
 
-</html><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-19 23:25:26
+</html><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 06:26:31
          compiled from "view\templates\top_menu.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_52dc50d6bf4f88_51935937')) {function content_52dc50d6bf4f88_51935937($_smarty_tpl) {?><div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<?php if ($_valid && !is_callable('content_52de0507701399_38674424')) {function content_52de0507701399_38674424($_smarty_tpl) {?><div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -231,9 +259,9 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "footer.tpl"
       </form>
     </div><!--/.navbar-collapse -->
   </div>
-</div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-19 23:25:26
+</div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 06:26:31
          compiled from "view\templates\ComboPaises.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_52dc50d6c223c9_42326441')) {function content_52dc50d6c223c9_42326441($_smarty_tpl) {?> 
+<?php if ($_valid && !is_callable('content_52de0507738840_26484738')) {function content_52de0507738840_26484738($_smarty_tpl) {?> 
  <label for="">Seleccione Pais</label>
                 
                 <select class="form-control"  name="pais" id="pais"onchange="$.post( 'CiudadesPais.php', { pais: $('#pais').val()}, function( data ) {$('#ciudades').html( data );} ); "> 
@@ -253,8 +281,8 @@ $_smarty_tpl->tpl_vars['Lugar']->_loop = true;
 				</select>
                 <br/>
                 <div id="ciudades">
-				</div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-19 23:25:26
+				</div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 06:26:31
          compiled from "view\templates\footer.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_52dc50d6c40445_47734517')) {function content_52dc50d6c40445_47734517($_smarty_tpl) {?><footer style="" class="container">
+<?php if ($_valid && !is_callable('content_52de050775caa0_78321604')) {function content_52de050775caa0_78321604($_smarty_tpl) {?><footer style="" class="container">
         <p align="center">© Ticketes 2014</p>
 </footer><?php }} ?>
