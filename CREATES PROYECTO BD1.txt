@@ -22,6 +22,7 @@ e_Descripcion			Varchar(20)		NOT NULL,
 e_fk_COMPRA                     number (20)             NOT NULL,     
 e_fk_RECINTO                    number (20)     	NOT NULL,
 e_fk_EMPLEADO			number(20)		NOT NULL,
+e_fk_LUGAR			number(20)		NOT NULL,
 
 Constraint pk_evento	primary key(e_Codigo),
 Constraint check_censura check(e_Censura IN('A','B','B-15','C')),
