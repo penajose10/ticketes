@@ -2,9 +2,12 @@
 include_once 'Util_Database.php';
 include_once 'Util_String.php';
 
-define ("agregar_evento","insert into EVENTO values (e_codigo.nextval,'%','%','%','%','%',NULL,1,1)");
+define ("agregar_evento","insert into EVENTO values (e_codigo.nextval,'%','%','%','%','%',%,%,%)");
 define ("eliminar_evento","delete from EVENTO where e_codigo=%");
 define ("modificar_evento","update set e_nombre='%',e_censura='%',e_categoria='%',e_genero='%',e_descripcion='%' from EVENTO where e_codigo=%");
+define ("eventos","select * from EVENTO");
+define("Evento_id","select * from EVENTO where E_CODIGO=%");
+
 
 
 abstract class Evento extends Util_Database {
@@ -62,6 +65,25 @@ $query=Util_String::concatenate(modificar_evento,$valores);
 echo $query;
 Evento::execute_query($query);
 }
+
+
+   public static function F_evento() {
+
+     $eventos =Evento::execute_select(eventos);
+     return $eventos;
+ 
+        //print_r($eventos);
+
+    }
+
+    public static function eventoID($Codigo){
+        $valores = array();
+        $valores[0]=$Codigo;
+        $query=UTIL_STRING::concatenate(Evento_id,$valores);
+        $evento= Evento::execute_select($query);
+        return $evento; 
+
+    }
 
 }
 

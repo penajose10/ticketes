@@ -50,12 +50,21 @@
 
 
 
-					 
+					 <div>
+						{include file="ComboPaises.tpl"}
 
+					 	
+					 </div>	
 					 	  
-
- 				 	 {include file="ComboPaises.tpl"}
-
+					 	  <div>
+					 	  		{include file="ComboEmpleado.tpl"}
+					 	  </div>					 	
+					 	  
+							<div>
+								{include file="ComboRecinto.tpl"}
+							</div>
+ 				 	
+							
 
  				 	 <br>
 

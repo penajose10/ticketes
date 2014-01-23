@@ -79,6 +79,7 @@
 
 
  				 	 {include file="ComboPaises.tpl"}
+ 				 	 {include file="ComboEmpleado.tpl"}
 
 
  				 	 	<div class="form-group">

@@ -138,6 +138,13 @@ abstract class EMPLEADO extends Util_Database {
         return $empleado; 
 
     }
+
+
+
+  
+   
+
+
 }
 
 
