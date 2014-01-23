@@ -2,9 +2,9 @@
 include_once 'Util_Database.php';
 include_once 'Util_String.php';
 
-define ("agregar_stand","insert into STAND values (s_codigo.nextval,'%','%','%','%','%',%,%)");
+define ("agregar_stand","insert into STAND values (s_codigo.nextval,'%','%',%,%,to_date('%','dd/mm/yyyy'),%,%)");
 define ("eliminar_stand","delete from STAND where s_codigo=%");
-define ("modificar_stand","update set s_nombre='%',s_tipo='%',s_cantidad_snack='%',s_csntidad_bebidas='%',s_fecha_asignacion='%',from STAND where s_codigo=%");
+define ("modificar_stand","update STAND set s_nombre='%',s_tipo='%',s_cantidad_snack='%',s_csntidad_bebidas='%',s_fecha_asignacion='%',from STAND where s_codigo=%");
 define("tipoStand","select distinct(S_TIPO) from STAND");
 
 
@@ -15,6 +15,8 @@ abstract class Stand extends Util_Database {
 	private $s_cantidad_snack;
 	private $s_cantidad_bebidas;
 	private $s_fecha_asignacion;
+    private $s_fk_centro_comercial;
+	private $s_fk_recinto;
 	
 	public static function StandT(){
 		$stand= Stand::execute_select(tipoStand);

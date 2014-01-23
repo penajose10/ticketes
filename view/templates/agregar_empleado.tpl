@@ -7,6 +7,7 @@
 <div class="container">
 	<div class="row clearfix">
 		<div class="col-md-12 column">
+        <form role="form" action="Insert.php" method="post">
 			<h1>Agregar Empleado</h1>
 			<form role="form">
 				<div class="form-group">
@@ -62,8 +63,10 @@
   					<option>STAND</option>
  				 	
  				 	</select>
+                    
 
-			</form>
+		  </form>
+            <button type="button" class="btn btn-primary btn-lg">Agregar</button>
 		</div>
 	</div>
 

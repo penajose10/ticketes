@@ -26,6 +26,11 @@ define("Lugar","model/Lugar.php");
 define("Recinto","model/Recinto.php");
 define("Stand","model/Stand.php");
 define("Evento","model/Evento.php");
+define("Temporada","model/Temporada.php");
+define("Tipo_Entrada","model/Tipo_Entrada.php");
+define("Empresa_Envio","model/Empresa_Envio.php");
+define("Compra","model/Compra.php");
+define("Horario","model/Horario.php");
 
 
 /* Uploads*/
