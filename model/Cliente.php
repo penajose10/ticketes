@@ -4,9 +4,10 @@ include_once 'Util_Database.php';
 include_once 'Util_String.php';
 
 define ('clientes','select* from CLIENTE');
-define("agregarCli","INSERT INTO CLIENTE  values (cli_codigo.nextval,'%','%','%',to_date('%','dd/mm/yyyy'),'%','%','%','%',%,%,'%','%')");
-define("actualizaCli","UPDATE CLIENTE SET cli_Rif='%', cli_Nombre_fiscal='%',cli_denominacion_fiscal='%',cli_fecha_creacion=to_date('%','dd/mm/yyyy'),cli_calle='%', cli_Urb='%', cli_Edificio='%', cli_tipo_cli='%', cli_puntos_acumulados=%, cli_fk_lugar=%, cli_correo='%', cli_clave='%' where cli_codigo=%");
+define("agregarCli","INSERT INTO CLIENTE  values (cli_codigo.nextval,'%','%','%',to_date('%','yyyy-mm-dd'),'%','%','%','%',%,%,'%','%')");
+define("actualizaCli","UPDATE CLIENTE SET cli_Rif='%', cli_Nombre_fiscal='%',cli_denominacion_fiscal='%',cli_fecha_creacion=to_date('%','yyyy-mm-dd'),cli_calle='%', cli_Urb='%', cli_Edificio='%', cli_tipo_cli='%', cli_puntos_acumulados=%, cli_fk_lugar=%, cli_correo='%', cli_clave='%' where cli_codigo=%");
 define("eliminarCli","DELETE FROM CLIENTE where cli_codigo=%");
+define('cli_id',"select * from CLIENTE where CLI_CODIGO=%");
 
 
 
@@ -33,22 +34,18 @@ public static function ClienteN(){
 
 $cliente =Cliente::execute_select(empleados);
 
-print_r($cliente);
-
+//print_r($cliente);
+return $cliente;
 }
   
 
-  public static function f_select_nombres_empleados($nombreempleado, $apellidoempleado){
-
-$values = array();
-$values[0]= $nombreempleado;
-$values[1]= $apellidoempleado;
-$query= Util_String::concatenate(empleado_nombre, $values);
-print_r($query);
-$ejecucion=EMPLEADO::execute_select($query);
-print_r($ejecucion);
-
-}
+  public static function ClienteID($Codigo){
+		$valores = array();
+		$valores[0]=$Codigo;
+		$query=UTIL_STRING::concatenate(cli_id,$valores);
+  		$cliente= Cliente::execute_select($query);
+		return $cliente;	
+	}
 
  public static function agregarCli($Rif,$NombreF,$df,$fcre,$calle,$Urb,$Edif,$tipo,$ptos,$lug,$correo,$clave){
 
@@ -122,7 +119,7 @@ $query= Util_String::concatenate(eliminarCli, $values);
 
 //Cliente::actualizarCli('j6364-8548','nuevoCli1','novoCli1','21/01/2014','morichal21','guacuco32','achiza','CORPORATIVO',102,3,'novocli@example1.com','n7899676654',1);
 
-Cliente::eliminarCli(1);
+//Cliente::eliminarCli(1);
 
 
 ?> 

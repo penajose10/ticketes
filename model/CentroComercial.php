@@ -22,12 +22,12 @@ abstract class CentroComercial extends Util_DataBase {
 		return $cc;	
 	}
 	
-	public static function CentroComercialID($Codigo){
+	public static function CCID($Codigo){
 		$valores = array();
 		$valores[0]=$Codigo;
 		$query=UTIL_STRING::concatenate(cc_id,$valores);
   		$cc= CentroComercial::execute_select($query);
-		return $recinto;	
+		return $cc;	
 	}
 	
 	public static function InsertarCC($Nombre , $lug){

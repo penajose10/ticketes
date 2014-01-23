@@ -28,8 +28,8 @@ public static function ProvN(){
 
 $proveedor =Proveedor::execute_select(proveedor);
 
-print_r($proveedor);
-
+//print_r($proveedor);
+return $proveedor;
 }
   
   public static function ProvID($Codigo){
@@ -108,5 +108,5 @@ $query= Util_String::concatenate(eliminar_prov, $values);
 
 //Proveedor::actualizarProv('j123978-8','yeuyau','logro','parcero','wiii','don teso',021548,3,21);
 
-Proveedor::eliminarProv(21);
+//Proveedor::eliminarProv(21);
 ?> 
