@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 18:57:53
+=======
 <?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 06:26:31
+>>>>>>> eb4f043af493656474c917d593540f3bc3112d68
          compiled from "view\templates\agregar_empleado.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2638852dc13b50f4716-65247706%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,31 +11,35 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8efe79ccaf0dc007780404c7d7a5b383e03493c8' => 
     array (
       0 => 'view\\templates\\agregar_empleado.tpl',
+<<<<<<< HEAD
+      1 => 1390192103,
+=======
       1 => 1390281187,
+>>>>>>> eb4f043af493656474c917d593540f3bc3112d68
       2 => 'file',
     ),
     '66a8c2ff066aaf66c9998bd03de492a82f694cc6' => 
     array (
       0 => 'view\\templates\\base.tpl',
-      1 => 1390166380,
+      1 => 1390154903,
       2 => 'file',
     ),
     '884f48beb8209f6d8de3a031ff4e96496a091e30' => 
     array (
       0 => 'view\\templates\\top_menu.tpl',
-      1 => 1390152009,
+      1 => 1390151983,
       2 => 'file',
     ),
     '62c840c5022c96e13c53feb89868dd384cd84b6d' => 
     array (
       0 => 'view\\templates\\ComboPaises.tpl',
-      1 => 1390166380,
+      1 => 1390162942,
       2 => 'file',
     ),
     'abaa0c9ef9ab3c0865d3c824fe63b3bdf32d0ce2' => 
     array (
       0 => 'view\\templates\\footer.tpl',
-      1 => 1390166380,
+      1 => 1390154952,
       2 => 'file',
     ),
   ),
@@ -81,7 +89,11 @@ bootstrap.min.js"></script>
             <?php /*  Call merged included template "top_menu.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("top_menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '2638852dc13b50f4716-65247706');
+<<<<<<< HEAD
+content_52deb5218323d4_92710774($_smarty_tpl);
+=======
 content_52de0507701399_38674424($_smarty_tpl);
+>>>>>>> eb4f043af493656474c917d593540f3bc3112d68
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "top_menu.tpl" */?>
     
 
@@ -184,7 +196,11 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "top_menu.tp
  				 	 <?php /*  Call merged included template "ComboPaises.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("ComboPaises.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '2638852dc13b50f4716-65247706');
+<<<<<<< HEAD
+content_52deb5218ac7d3_88041695($_smarty_tpl);
+=======
 content_52de0507738840_26484738($_smarty_tpl);
+>>>>>>> eb4f043af493656474c917d593540f3bc3112d68
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "ComboPaises.tpl" */?>
 
 
@@ -224,14 +240,24 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "ComboPaises
             <?php /*  Call merged included template "footer.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '2638852dc13b50f4716-65247706');
+<<<<<<< HEAD
+content_52deb5218f1f59_51524312($_smarty_tpl);
+=======
 content_52de050775caa0_78321604($_smarty_tpl);
+>>>>>>> eb4f043af493656474c917d593540f3bc3112d68
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "footer.tpl" */?>
         
 </body>
 
+<<<<<<< HEAD
+</html><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 18:57:53
+         compiled from "view\templates\top_menu.tpl" */ ?>
+<?php if ($_valid && !is_callable('content_52deb5218323d4_92710774')) {function content_52deb5218323d4_92710774($_smarty_tpl) {?><div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+=======
 </html><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 06:26:31
          compiled from "view\templates\top_menu.tpl" */ ?>
 <?php if ($_valid && !is_callable('content_52de0507701399_38674424')) {function content_52de0507701399_38674424($_smarty_tpl) {?><div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+>>>>>>> eb4f043af493656474c917d593540f3bc3112d68
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -259,9 +285,15 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "footer.tpl"
       </form>
     </div><!--/.navbar-collapse -->
   </div>
+<<<<<<< HEAD
+</div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 18:57:53
+         compiled from "view\templates\ComboPaises.tpl" */ ?>
+<?php if ($_valid && !is_callable('content_52deb5218ac7d3_88041695')) {function content_52deb5218ac7d3_88041695($_smarty_tpl) {?> 
+=======
 </div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 06:26:31
          compiled from "view\templates\ComboPaises.tpl" */ ?>
 <?php if ($_valid && !is_callable('content_52de0507738840_26484738')) {function content_52de0507738840_26484738($_smarty_tpl) {?> 
+>>>>>>> eb4f043af493656474c917d593540f3bc3112d68
  <label for="">Seleccione Pais</label>
                 
                 <select class="form-control"  name="pais" id="pais"onchange="$.post( 'CiudadesPais.php', { pais: $('#pais').val()}, function( data ) {$('#ciudades').html( data );} ); "> 
@@ -281,8 +313,14 @@ $_smarty_tpl->tpl_vars['Lugar']->_loop = true;
 				</select>
                 <br/>
                 <div id="ciudades">
+<<<<<<< HEAD
+				</div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 18:57:53
+         compiled from "view\templates\footer.tpl" */ ?>
+<?php if ($_valid && !is_callable('content_52deb5218f1f59_51524312')) {function content_52deb5218f1f59_51524312($_smarty_tpl) {?><footer style="" class="container">
+=======
 				</div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 06:26:31
          compiled from "view\templates\footer.tpl" */ ?>
 <?php if ($_valid && !is_callable('content_52de050775caa0_78321604')) {function content_52de050775caa0_78321604($_smarty_tpl) {?><footer style="" class="container">
+>>>>>>> eb4f043af493656474c917d593540f3bc3112d68
         <p align="center">© Ticketes 2014</p>
 </footer><?php }} ?>

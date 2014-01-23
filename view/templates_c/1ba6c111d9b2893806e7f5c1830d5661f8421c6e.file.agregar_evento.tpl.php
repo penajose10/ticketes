@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-22 18:42:48
-         compiled from "view\templates\ComboEliminarEmpleado.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2831852de1085223f11-94050854%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 18:53:00
+         compiled from "view\templates\agregar_evento.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1299452deaf108d1d67-38492773%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '700f5e0b892fb43670bec049a5dcc9c1d6a7afe8' => 
+    '1ba6c111d9b2893806e7f5c1830d5661f8421c6e' => 
     array (
-      0 => 'view\\templates\\ComboEliminarEmpleado.tpl',
-      1 => 1390408465,
+      0 => 'view\\templates\\agregar_evento.tpl',
+      1 => 1390326774,
       2 => 'file',
     ),
     '66a8c2ff066aaf66c9998bd03de492a82f694cc6' => 
@@ -29,12 +29,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2831852de1085223f11-94050854',
+  'nocache_hash' => '1299452deaf108d1d67-38492773',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52de10852bee59_62495274',
+  'unifunc' => 'content_52deaf109b41a0_84307726',
   'variables' => 
   array (
     'css' => 0,
@@ -44,7 +44,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52de10852bee59_62495274')) {function content_52de10852bee59_62495274($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_52deaf109b41a0_84307726')) {function content_52deaf109b41a0_84307726($_smarty_tpl) {?><!DOCTYPE html>
 <!--[if IE 7 ]><html class="ie ie7" lang="en"><![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"><![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
@@ -74,8 +74,8 @@ bootstrap.min.js"></script>
     
             <?php /*  Call merged included template "top_menu.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("top_menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '2831852de1085223f11-94050854');
-content_52e00318685752_90661662($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("top_menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1299452deaf108d1d67-38492773');
+content_52deb3fc60bb68_80386977($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "top_menu.tpl" */?>
     
 
@@ -98,39 +98,63 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "top_menu.tp
     
     <div class="container">
         
-<br />
+  <div class="jumbotron">
+      <div class="container">
+        <h1>Evento</h1>
+        <form role= "form" action="agregar_evento.php" method="post">
+       
+       <div class="form-group">
+          <label for="">Nombre Evento</label><input type="text" class="form-control" name="ne" id="ne"  placeholder="Nombre del Evento"/>
+        </div>
+        
+        <div class="form-group">
+        <label for="">Censura</label>
+        <select class="form-control" name ="c" id ="c">
+          <option>A</option>
+          <option>B</option>
+          <option>B15</option>
+          <option>C</option>
+          
+        </select>
+         </div>
+        
+        <div class="form-group">
+        <label for="exampleInputPassword1">Categoria</label>
+        <select class="form-control" name="ca" id="ca">
+          <option>Teatro</option>
+          <option>Musica</option>
+          <option>Especial</option>
+          <option>Deporte</option>
+          
+        </select>
+        </div>
+        
+        <div class="form-group">
+        <label for="exampleInputPassword1">Genero</label>
+        <select class="form-control" name="g" id="g">
+          <option>Genero</option>
+          <option>Genero</option>
+          <option>Genero</option>
+          <option>Genero</option>
+          <option>Genero</option>
+        </select>
+         </div>
+        
+        <div class="form-group">
+        <label for="exampleInputPassword1">Descripcion</label>
+        <div class="bs-example">
+      <form role="form">
+        <textarea class="form-control" rows="3" name="d" id="d"></textarea>
+      </form>
+    
+    
+    <button type="button" class="btn btn-primary">Agregar Evento</button>
+   </form> 
+        
+       
+      </div>
+    
 
-<br>
-<br /><br />
-
-
-
-<br>
- <label for="">Seleccione Empleado a Eliminar</label>
-               
-               <form role="form" action="BorrarEmpleado.php" method="post">
-                <select class="form-control"  name="empleado" id="empleado">
-                
-                 <option value="">--------</option> 
-  							<?php  $_smarty_tpl->tpl_vars['empleado'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['empleado']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['empleados']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['empleado']->key => $_smarty_tpl->tpl_vars['empleado']->value){
-$_smarty_tpl->tpl_vars['empleado']->_loop = true;
-?>  
-                            
-                            
-         <option value="<?php echo $_smarty_tpl->tpl_vars['empleado']->value['EMP_ID'];?>
-"> <?php echo $_smarty_tpl->tpl_vars['empleado']->value['EMP_NOMBRE'];?>
-</option> 
-     <?php } ?>
-				</select>
-                <br/>
-                
-				<div class="checkbox">
-					 
-				</div> <button type="submit" class="btn btn-default">Borrar</button>
-                
-                
     
 
         
@@ -139,15 +163,15 @@ $_smarty_tpl->tpl_vars['empleado']->_loop = true;
                  
             <?php /*  Call merged included template "footer.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '2831852de1085223f11-94050854');
-content_52e0031873d158_68398662($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1299452deaf108d1d67-38492773');
+content_52deb3fc65f4c2_86179104($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "footer.tpl" */?>
         
 </body>
 
-</html><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-22 18:42:48
+</html><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 18:53:00
          compiled from "view\templates\top_menu.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_52e00318685752_90661662')) {function content_52e00318685752_90661662($_smarty_tpl) {?><div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<?php if ($_valid && !is_callable('content_52deb3fc60bb68_80386977')) {function content_52deb3fc60bb68_80386977($_smarty_tpl) {?><div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -175,8 +199,8 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "footer.tpl"
       </form>
     </div><!--/.navbar-collapse -->
   </div>
-</div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-22 18:42:48
+</div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2014-01-21 18:53:00
          compiled from "view\templates\footer.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_52e0031873d158_68398662')) {function content_52e0031873d158_68398662($_smarty_tpl) {?><footer style="" class="container">
+<?php if ($_valid && !is_callable('content_52deb3fc65f4c2_86179104')) {function content_52deb3fc65f4c2_86179104($_smarty_tpl) {?><footer style="" class="container">
         <p align="center">© Ticketes 2014</p>
 </footer><?php }} ?>
